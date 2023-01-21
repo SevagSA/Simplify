@@ -35,24 +35,21 @@ class CardDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 @api_view(['GET'])
-def get_all_spendings_for_card(request):
-    card = request.data.get("card")
+def get_all_spendings_for_card(request, card):
     spendings = Expenses.objects.filter(card=card).filter(is_income=False)
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def get_all_income_for_card(request):
-    card = request.data.get("card")
+def get_all_income_for_card(request, card):
     spendings = Expenses.objects.filter(card=card).filter(is_income=True)
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def get_recent_spendings(request):
-    card = request.data.get("card")
+def get_recent_spendings(request, card):
     spendings = Expenses.objects.filter(card=card).filter(is_income=False).order_by('-date_of_expense')[:3]
     serializer = ExpensesSerializer(spendings, many=True)
     return Response(serializer.data)
@@ -67,8 +64,8 @@ def get_expenses_for_month(request, card, month, year, is_income):
 
 
 @api_view(['GET'])
-def get_highest_recurring_expense(request):
-    spendings = Expenses.objects.filter(is_income=False).exclude(frequency=settings.ONCE).order_by('amount')[:5]
+def get_highest_recurring_expense(request, card):
+    spendings = Expenses.objects.filter(card=card).filter(is_income=False).exclude(frequency=settings.ONCE).order_by('-amount')[:3]
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
 
