@@ -176,7 +176,7 @@ EXPENSES_CATEGORY = (
     (INCOME, "Income"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),
-    (MISCELLANEOUS, "Yearly"),
+    (INCOME, "Income"),
 )
 
 MEMBER_EMAIL = 'john@doe.com'
