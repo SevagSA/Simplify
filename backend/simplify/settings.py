@@ -29,7 +29,7 @@ INSTALLED_APPS = [
 
     # local
     'member',
-    'transactions'
+    'transactions',
     # 3rd party
     'rest_framework'
 
@@ -119,3 +119,12 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CREDIT = "Credit"
+DEBIT = "Debit"
+
+CARD_TYPES = (
+    (DEBIT, 'Debit Card'),
+    (CREDIT, 'Credit Card')
+)
