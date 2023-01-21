@@ -128,3 +128,28 @@ CARD_TYPES = (
     (DEBIT, 'Debit Card'),
     (CREDIT, 'Credit Card')
 )
+
+ONCE = 1
+DAILY = 365
+WEEKLY = 52
+MONTHLY = 12
+YEARLY = 1
+
+FREQUENCY_TYPES = (
+    (ONCE, "One-time purchase"),
+    (WEEKLY, "Weekly"),
+    (MONTHLY, "Monthly"),
+    (YEARLY, "Yearly"),
+)
+
+FOOD = "Food"
+HOUSING = "Housing"
+ENTERTAINMENT = "Entertainment"
+MISCELLANEOUS = "Miscellaneous"
+
+EXPENSES_CATEGORY = (
+    (FOOD, "Food"),
+    (HOUSING, "Housing"),
+    (ENTERTAINMENT, "Entertainment"),
+    (MISCELLANEOUS, "Miscellaneous"),
+)
