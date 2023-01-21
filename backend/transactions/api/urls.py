@@ -11,5 +11,5 @@ urlpatterns = [
     path('expenses/spendings/highest', get_highest_recurring_expense),
     path('cards/', CardList.as_view()),
     path('cards/<int:pk>', CardDetail.as_view()),
-    path('cards/<int:card>/<int:month>/<int:year>/<is_income>', get_expenses_for_month),
+    path('cards/<int:card>/<int:month>/<int:year>/<is_income>/', get_expenses_for_month),
 ]
