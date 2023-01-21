@@ -132,14 +132,14 @@ CARD_TYPES = (
 
 # Frequency Types
 
-ONCE = "One-time purchase"
+ONCE = "One-time"
 DAILY = "Daily"
 WEEKLY = "Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
 FREQUENCY_TYPES = (
-    (ONCE, "One-time purchase"),
+    (ONCE, "One-time"),
     (DAILY, "Daily"),
     (WEEKLY, "Weekly"),
     (MONTHLY, "Monthly"),
@@ -169,14 +169,15 @@ FOOD = "Food"
 HOUSING = "Housing"
 ENTERTAINMENT = "Entertainment"
 MISCELLANEOUS = "Miscellaneous"
+INCOME = "Income"
 
 EXPENSES_CATEGORY = (
     (FOOD, "Food"),
+    (INCOME, "Income"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),
     (MISCELLANEOUS, "Yearly"),
 )
-
 
 MEMBER_EMAIL = 'john@doe.com'
 MEMBER_PASSWORD = 'theepicduck'
