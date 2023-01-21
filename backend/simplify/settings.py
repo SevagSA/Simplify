@@ -173,3 +173,7 @@ EXPENSES_CATEGORY = (
     (ENTERTAINMENT, "Entertainment"),
     (MISCELLANEOUS, "Yearly"),
 )
+
+
+MEMBER_EMAIL = 'john@doe.com'
+MEMBER_PASSWORD = 'theepicduck'
