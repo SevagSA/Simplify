@@ -135,12 +135,31 @@ WEEKLY = "Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
+RBC = "RBC"
+TD = "TD"
+NATIONAL = "NB"
+BMO = "BMO"
+SCOTIA = "SC"
+
+DAILY = 365
+WEEKLY = 52
+MONTHLY = 12
+YEARLY = 1
+
 FREQUENCY_TYPES = (
     (ONCE, "One-time purchase"),
     (DAILY, "Daily"),
     (WEEKLY, "Weekly"),
     (MONTHLY, "Monthly"),
     (YEARLY, "Yearly"),
+)
+BANK_TYPES = (
+    (RBC, "RBC"),
+    (TD, "TD"),
+    (NATIONAL, "National Bank"),
+    (BMO, "BMO"),
+    (SCOTIA, "Scotia Bank")
+
 )
 
 FOOD = "Food"
