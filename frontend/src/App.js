@@ -4,7 +4,10 @@ import Dashboard from './components/Dashboard/Dashboard';
 
 function App(){
   return (
-    <div className="App">
+    <div className="App background-color-class">
+      {/* <header className="App-header">
+        
+      </header> */}
       <div>
         <Sidebar />
       </div>
