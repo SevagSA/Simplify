@@ -1,4 +1,4 @@
-import { Component } from "react";
+// import { Component } from "react";
 import "./Dashboard.css";
 import DashboardCard from '../../components/DashboardCard/DashboardCard';
 import ExpensesCard from '../../components/ExpensesCard/ExpensesCard';
@@ -8,25 +8,19 @@ import DataGraph from '../../components/DataGraph/DataGraph';
 import { ScheduledPayments } from '../../components/ScheduledPayments/ScheduledPayments';
 import PersonalGoal from '../../components/PersonalGoal/PersonalGoal';
 
-export default class Dashboard extends Component(){
-    constructor(props){
-        super(props);
-    }
-
-    render(){
-        return(
+export default function Dashboard(){
+    return(
+        <div>
+            <h1>Dashboard</h1>
             <div>
-                <h1>Dashboard</h1>
-                <div>
-                    <DashboardCard />
-                    <ExpensesCard />
-                    <MonthlyPayments />
-                    <LatestSpendings />
-                    <DataGraph />
-                    <ScheduledPayments />
-                    <PersonalGoal />
-                </div>
+                <DashboardCard />
+                <ExpensesCard />
+                <MonthlyPayments />
+                <LatestSpendings />
+                <DataGraph />
+                <ScheduledPayments />
+                <PersonalGoal />
             </div>
-        );
-    }
+        </div>
+    );
 }
