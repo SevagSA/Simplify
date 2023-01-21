@@ -1,6 +1,6 @@
 import { Component } from "react";
 import './TransactionSummary.css';
-import { Table } from "reactstrap";
+import { Table, Button } from "reactstrap";
 
 class TransactionSummary extends Component{
     constructor(props){
@@ -31,6 +31,7 @@ class TransactionSummary extends Component{
         return(
             <div>
                 <Table striped bordered hover>
+                <Button variant="dark">Add Transaction</Button>
                     <thead>
                         <tr>
                             <th>Source</th>
