@@ -7,7 +7,12 @@ function App() {
       {/* <header className="App-header">
         
       </header> */}
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
+      <div>
+        
+      </div>
     </div>
   );
 }

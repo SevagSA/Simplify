@@ -18,36 +18,60 @@ export default class Sidebar extends Component{
                     <div className="width-4"></div>
                   </div>
                   <h2>Welcome back</h2>
-                  <h3>John Doe</h3>
+                  <h6>John Doe</h6>
                 </div>
               </div>
 
               <div className="monthly-budget full-width">
                 <div>
                   <div className="full-width">
-                    <h5>$9,000.00</h5>
+                    <h1 className="size-24">$9,000.00</h1>
                   </div>
-                  <h3>Monthly budget</h3>
+                  <h2>Monthly budget</h2>
                 </div>
               </div>
 
               <div className="menu-items full-width">
                 <div>
-                  <div className="full-width">
-                    <h3>Dashboard</h3>
+                  <div className="small-width center-element">
+                    <div className="width-5"></div>
+                    <div className="icon-picture"></div>
                   </div>
-                  <h3>Investment tips</h3>
-                  <h3>Transaction</h3>
-                  <h3>Cards</h3>
+                  <div className="small-width center-element">
+                    <div className="width-5"></div>
+                    <div className="icon-picture"></div>
+                  </div>
+                  <div className="small-width center-element">
+                    <div className="width-5"></div>
+                    <div className="icon-picture"></div>
+                  </div>
+                  <div className="small-width center-element">
+                    <div className="width-5"></div>
+                    <div className="icon-picture"></div>
+                  </div>
+                </div>
+                <div className="center-left">
+                  <div className="full-width small-margin-top">
+                    <h2>Dashboard</h2>
+                  </div>
+                  <div className="full-width small-margin-top">
+                  <h2>Investment tips</h2>
+                  </div>
+                  <div className="full-width small-margin-top">
+                  <h2>Transaction</h2>
+                  </div>
+                  <div className="full-width small-margin-top">
+                  <h2>Cards</h2>
+                  </div>
                 </div>
               </div>
 
               <div className="div-styling tip-of-the-day center-text">
                 <div className="container-element">
-                  <div className="full-width">
-                    <h4 className="top-element">Tip of the day</h4>
+                  <div className="full-width-small">
+                    <h6 className="top-element size-18 margin-top-small">Tip of the day</h6>
                   </div>
-                  <p className="bottom-element">Make your own coffee, don't buy it.</p>
+                  <p className="bottom-element">Instead of buying your coffee, make it at home.</p>
                 </div>
               </div>
             </div>

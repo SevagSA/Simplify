@@ -14,10 +14,10 @@
 .tip-of-the-day {
     position: absolute;
     bottom: 0;
-    width: 16vw;
-    height: 10vh;
+    width: 14vw;
+    height: 9vh;
     border-radius: 1vw;
-    margin: 2vh 1vw 2vh 1vw;
+    margin: 2vh 2vw 2vh 2vw;
     background-color: white;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .top-element {
-    width: 16vw;
+    width: 14vw;
 }
 
 .bottom-element {
@@ -46,12 +46,43 @@
     align-items: center;
 }
 
+.margin-top-small {
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+}
+
 .center-element {
     display: flex;
     align-items: center;
 }
 
-h1, h4 {
+h1 {
+    color: #003E54;
+    width: 18vw;
+    font-size: 32px !important;
+    font-weight: bold !important;
+}
+
+h2{
+    color: #6D6D6D;
+    font-size: 16px !important;
+}
+
+h6{
+    font-weight: bold !important;
+    font-size: 16px;
+}
+
+.size-18{
+    font-size: 18px !important;
+    color: black !important;
+}
+
+.size-24 {
+    font-size: 24px !important;
+}
+
+h4 {
     width: 18vw;
 }
 
@@ -63,14 +94,14 @@ h1, h4 {
 }
 
 .menu-items {
-    height: 40vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
 .user-element {
-    height: 26vh;
+    height: 36vh;
     width: 18vh;
     display: flex;
     align-items: center;
@@ -80,8 +111,20 @@ h1, h4 {
     width: 18vw;
 }
 
+.full-width-small {
+    width: 14vw;
+}
+
 .width-4 {
     width: 4vw;
+}
+
+.width-5 {
+    width: 4vw;
+}
+
+.center-left {
+    text-align: left !important;
 }
 
 .user-picture {
@@ -92,6 +135,26 @@ h1, h4 {
     background-size: cover;
 }
 
+.icon-picture {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 20vh;
+    background-color: #D9D9D9;
+    background-size: cover;
+}
+
 p {
     text-align: center;
+    color: #6D6D6D;
+}
+
+.small-width {
+    margin-top: 1vh;
+    width: 6.5vw;
+}
+
+.small-margin-top {
+    margin-top: 1vh;
+    padding-top: 0.5vh;
+    height: 2vw;
 }
