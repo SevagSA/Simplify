@@ -120,6 +120,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Card Types
 
 CREDIT = "Credit"
 DEBIT = "Debit"
@@ -129,22 +130,13 @@ CARD_TYPES = (
     (CREDIT, 'Credit Card')
 )
 
+# Frequency Types
+
 ONCE = "One-time purchase"
 DAILY = "Daily"
 WEEKLY = "Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
-
-RBC = "RBC"
-TD = "TD"
-NATIONAL = "NB"
-BMO = "BMO"
-SCOTIA = "SC"
-
-DAILY = 365
-WEEKLY = 52
-MONTHLY = 12
-YEARLY = 1
 
 FREQUENCY_TYPES = (
     (ONCE, "One-time purchase"),
@@ -153,6 +145,15 @@ FREQUENCY_TYPES = (
     (MONTHLY, "Monthly"),
     (YEARLY, "Yearly"),
 )
+
+# Bank Types
+
+RBC = "RBC"
+TD = "TD"
+NATIONAL = "NB"
+BMO = "BMO"
+SCOTIA = "SC"
+
 BANK_TYPES = (
     (RBC, "RBC"),
     (TD, "TD"),
@@ -161,6 +162,8 @@ BANK_TYPES = (
     (SCOTIA, "Scotia Bank")
 
 )
+
+# Expense Category
 
 FOOD = "Food"
 HOUSING = "Housing"
