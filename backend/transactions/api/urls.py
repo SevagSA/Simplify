@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import ExpensesList, ExpensesDetail, CardList, CardDetail, get_spendings, get_recent_spendings
+from .views import (
+    ExpensesList, ExpensesDetail,
+    CardList, CardDetail, get_spendings, get_recent_spendings, get_expenses_for_month)
 
 urlpatterns = [
     path('expenses/', ExpensesList.as_view()),
@@ -8,4 +10,5 @@ urlpatterns = [
     path('expenses/spendings/recent',get_recent_spendings),
     path('cards/', CardList.as_view()),
     path('cards/<int:pk>', CardDetail.as_view()),
+    path('cards/<int:card>/<int:month>/<int:year>/<is_income>', get_expenses_for_month),
 ]
