@@ -4,15 +4,12 @@ import DashboardCard from './components/DashboardCard/DashboardCard';
 import ExpensesCard from './components/ExpensesCard/ExpensesCard';
 import MonthlyPayments from './components/MonthlyPayments/MonthlyPayments';
 import {LatestSpendings} from './components/LatestSpendings/LatestSpendings'
+import DataGraph from './components/DataGraph/DataGraph';
 
-function App() {
+function App(){
   return (
     <div className="App">
-      <Sidebar />
-      <DashboardCard />
-      <ExpensesCard />
-      <MonthlyPayments />
-      <LatestSpendings />
+      <DataGraph/>
     </div>
   );
 }
