@@ -1,4 +1,8 @@
+import json
+
+from django.db.models import Sum
 from transactions.models import Expenses, Card
+from member.models import Member
 from transactions.api.serializers import ExpensesSerializer, CardSerializer
 
 from rest_framework import generics
@@ -65,3 +69,9 @@ def get_highest_recurring_expense(request):
     spendings = Expenses.objects.filter(is_income=False).exclude(frequency=settings.ONCE).order_by('amount')[:5]
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def sum_of_all_cards_for_member(request):
+    member = Member.objects.get(email=settings.MEMBER_EMAIL)
+    sum_of_cards = Card.objects.filter(member=member).aggregate(Sum('card_balance'))
+    return Response(str(sum_of_cards['card_balance__sum']))
