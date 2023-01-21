@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar/SidebarComponent';
 
 // Pages
 import Dashboard from './components/Dashboard/Dashboard';
+import Transactions from './components/Transactions/Transactions';
 
 function App(){
   return (
@@ -21,12 +22,14 @@ function App(){
 
         <BrowserRouter>
           <Routes>
-            <Route path="dashboard/" element={<Dashboard />}>
+              <Route path="/" element={null}></Route>
+              <Route path="/dashboard" element={<Dashboard />}></Route>
+              <Route path="/transactions" element={<Transactions />}></Route>
               {/* <Route index element={<Home />} />
               <Route path="blogs" element={<Blogs />} />np
               <Route path="contact" element={<Contact />} />
               <Route path="*" element={<NoPage />} /> */}
-            </Route>
+            
           </Routes>
         </BrowserRouter>
       </div>
