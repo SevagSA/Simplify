@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 
     # local
     'member',
+    'transactions'
     # 3rd party
     'rest_framework'
 
