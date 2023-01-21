@@ -31,20 +31,14 @@ class CardDetail(generics.RetrieveUpdateDestroyAPIView):
 
 @api_view(['GET'])
 def get_spendings(request):
-<<<<<<< Updated upstream
     card = request.data.get("card")
     spendings = Expenses.objects.filter(card=card).filter(is_income=False)
-=======
-    spendings = Expenses.objects.filter(is_income=False)
-    
->>>>>>> Stashed changes
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
 def get_recent_spendings(request):
-<<<<<<< Updated upstream
     card = request.data.get("card")
     spendings = Expenses.objects.filter(card=card).filter(is_income=False).order_by('-date_of_expense')[:3]
     serializer = ExpensesSerializer(spendings, many=True)
@@ -66,16 +60,8 @@ def get_expenses_for_month(request, card, month, year, is_income):
 
 # TODO get all spendings for card
 # TODO get all income for card
-=======
-    spendings = Expenses.objects.filter(is_income=False).order_by('-date_of_expense')[:3]
-
-    serializer = ExpensesSerializer(spendings,many=True)
-    return Response(serializer.data)
-
-@api_view(['GET'])
 def get_highest_recurring_expense(request):
     spendings = Expenses.objects.filter(is_income=False).exclude(frequency = settings.ONCE).order_by('amount')[:5]
     
     serializer = ExpensesSerializer(spendings,many=True)
-    return Response(serializer.data)    
->>>>>>> Stashed changes
+    return Response(serializer.data)  

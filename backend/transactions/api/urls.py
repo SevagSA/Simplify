@@ -1,11 +1,7 @@
 from django.urls import path
-<<<<<<< Updated upstream
 from .views import (
     ExpensesList, ExpensesDetail,
-    CardList, CardDetail, get_spendings, get_recent_spendings, get_expenses_for_month)
-=======
-from .views import ExpensesList, ExpensesDetail, CardList, CardDetail, get_spendings, get_recent_spendings, get_highest_recurring_expense
->>>>>>> Stashed changes
+    CardList, CardDetail, get_spendings, get_recent_spendings, get_expenses_for_month, get_highest_recurring_expense)
 
 urlpatterns = [
     path('expenses/', ExpensesList.as_view()),
