@@ -40,6 +40,7 @@ class Member(AbstractBaseUser, PermissionsMixin):
     name = models.TextField(max_length=30, default='')
     monthly_budget = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     personal_goal = models.DecimalField(max_digits=8,decimal_places=2, default=0)
+    is_first_login = models.BooleanField(default=True)
 
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
