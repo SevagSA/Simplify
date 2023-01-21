@@ -11,7 +11,15 @@ import PersonalGoal from './components/PersonalGoal/PersonalGoal';
 function App(){
   return (
     <div className="App">
-      <PersonalGoal/>
+      {/* <header className="App-header">
+        
+      </header> */}
+      <div>
+        <Sidebar />
+      </div>
+      <div>
+        
+      </div>
     </div>
   );
 }

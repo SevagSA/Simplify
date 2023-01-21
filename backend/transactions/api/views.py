@@ -32,3 +32,12 @@ def get_spendings(request):
     spendings = Expenses.objects.filter(is_income=False)
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def get_recent_spendings(request):
+    spendings = Expenses.objects.filter(is_income=False).order_by('-date_of_expense')[:3]
+    
+    serializer = ExpensesSerializer(spendings,many=True)
+    return Response(serializer.data)
+
+
