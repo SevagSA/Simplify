@@ -19,7 +19,7 @@ class Expenses(models.Model):
     source = models.CharField(max_length=20)
     amount = models.DecimalField(max_digits=8, decimal_places=2)
     # if it's recurring, specificy the frequency
-    frequency = models.IntegerField(choices=settings.FREQUENCY_TYPES, default=settings.ONCE)
+    frequency = models.CharField(max_length=17, choices=settings.FREQUENCY_TYPES, default=settings.ONCE)
     # TODO validate this to not be in the future
     date_of_expense = models.DateField()
     # i.e income vs spending, if its spending, * -1 to do calcualtions

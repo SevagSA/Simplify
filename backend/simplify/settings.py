@@ -129,14 +129,15 @@ CARD_TYPES = (
     (CREDIT, 'Credit Card')
 )
 
-ONCE = 1
-DAILY = 365
-WEEKLY = 52
-MONTHLY = 12
-YEARLY = 1
+ONCE = "One-time purchase"
+DAILY = "Daily"
+WEEKLY = "Weekly"
+MONTHLY = "Monthly"
+YEARLY = "Yearly"
 
 FREQUENCY_TYPES = (
     (ONCE, "One-time purchase"),
+    (DAILY, "Daily"),
     (WEEKLY, "Weekly"),
     (MONTHLY, "Monthly"),
     (YEARLY, "Yearly"),
@@ -151,5 +152,5 @@ EXPENSES_CATEGORY = (
     (FOOD, "Food"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),
-    (MISCELLANEOUS, "Miscellaneous"),
+    (MISCELLANEOUS, "Yearly"),
 )
