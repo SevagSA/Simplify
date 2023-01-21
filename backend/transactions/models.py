@@ -1,7 +1,8 @@
+from decimal import Decimal
 from django.db import models
 from member.models import Member
 from django.conf import settings
-
+from django.core.validators import MinValueValidator
 
 class Card(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
@@ -17,7 +18,7 @@ class Card(models.Model):
 class Expenses(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
     source = models.CharField(max_length=20)
-    amount = models.DecimalField(max_digits=8, decimal_places=2)
+    amount = models.DecimalField(max_digits=8, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     # if it's recurring, specificy the frequency
     frequency = models.CharField(max_length=17, choices=settings.FREQUENCY_TYPES, default=settings.ONCE)
     date_of_expense = models.DateField()

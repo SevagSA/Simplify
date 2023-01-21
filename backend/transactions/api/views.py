@@ -13,6 +13,7 @@ from .serializers import ExpensesSerializer, CardSerializer
 
 from django.conf import settings
 
+
 class ExpensesList(generics.ListCreateAPIView):
     queryset = Expenses.objects.all()
     serializer_class = ExpensesSerializer
@@ -64,11 +65,13 @@ def get_expenses_for_month(request, card, month, year, is_income):
     serializer = ExpensesSerializer(expenses, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def get_highest_recurring_expense(request):
     spendings = Expenses.objects.filter(is_income=False).exclude(frequency=settings.ONCE).order_by('amount')[:5]
     serializer = ExpensesSerializer(spendings,many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def sum_of_all_cards_for_member(request):
