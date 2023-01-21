@@ -1,5 +1,3 @@
-import json
-
 from django.db.models import Sum
 from transactions.models import Expenses, Card
 from member.models import Member
