@@ -135,6 +135,7 @@ CARD_TYPES = (
 ONCE = "One-time"
 DAILY = "Daily"
 WEEKLY = "Weekly"
+BIWEEKLY = "Bi-Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
