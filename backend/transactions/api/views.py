@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from datetime import date
 import json
 import re
@@ -33,6 +34,13 @@ class CardList(generics.ListCreateAPIView):
 class CardDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Card.objects.all()
     serializer_class = CardSerializer
+
+
+@api_view(['POST', 'DELETE'])
+def delete_card(request):
+    card = get_object_or_404(Card, pk=request.data.get("id"))
+    card.delete()
+    return Response({'message': 'card was successfully deleted'})
 
 
 @api_view(['GET'])
