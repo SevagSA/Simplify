@@ -19,7 +19,7 @@ urlpatterns = [
     path('expenses/expense-categories/', expense_categories),
 
     path('cards/', CardList.as_view()),
-    path('cards/<int:pk>', CardDetail.as_view()),
+    path('cards/<int:pk>/', CardDetail.as_view()),
     
     path('cards/<int:pk>/last-month-spendings/', compare_last_months_spending_for_card),
     path('cards/<int:pk>/last-month-income/', compare_last_months_income_for_card),
