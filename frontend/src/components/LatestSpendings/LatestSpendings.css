@@ -27,7 +27,7 @@
 .new-widthisgood234 {
     float:left; 
     display:inline; 
-    width: 10vw !important;
+    width: 6vw !important;
     text-align: right !important;
     /* margin: 0px 0.9375vw 0px 0.9375vw; */
 }
@@ -72,7 +72,7 @@
     color: black;
     font-weight: normal;
     padding-top: 1.5vh;
-    width: 10vw;
+    width: 6vw;
     text-align: right !important;
 }
 

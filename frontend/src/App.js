@@ -13,6 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Transactions from './components/Transactions/Transactions';
 import UserCards from './components/UserCards/UserCards';
 import CardForm from './components/CardForm/CardForm';
+import Wallet from './components/Wallet/Wallet';
 import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
 function App(){
@@ -39,6 +40,7 @@ function App(){
                   <Route path="/dashboard" element={<Dashboard
                     card={card}
                    />}></Route>
+                  <Route path="/wallet" element={<Wallet />}></Route>
                   <Route path="/transactions" element={<Transactions />}></Route>
                   <Route path="/cards" element={<UserCards />}></Route>
                   <Route path="/addcard" element={<CardForm />}></Route>
