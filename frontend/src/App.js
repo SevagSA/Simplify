@@ -16,12 +16,10 @@ import CardForm from './components/CardForm/CardForm';
 function App(){
   return (
     <div className="App">
-      <div>
+      <div className='small-width123'>
         <Sidebar />
       </div>
-      <div>
-        {/* <Dashboard /> */}
-
+      <div className='big-width123'>
         <BrowserRouter>
           <Routes>
               <Route path="/" element={null}></Route>
@@ -37,6 +35,7 @@ function App(){
             
           </Routes>
         </BrowserRouter>
+
       </div>
     </div>
   );
