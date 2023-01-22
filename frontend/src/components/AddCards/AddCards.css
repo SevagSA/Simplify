@@ -1,0 +1,16 @@
+.add-button-style {
+    height: 3.8vh !important;
+    width: 9.7vw !important;
+    background-color: #003E54;
+    color: #FAFAFA;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 1vh;
+}
+
+.sizebutton {
+    margin-left: 43.1vw !important;
+    height: 3.8vh !important;
+    width: 10vw !important;
+}
+

@@ -7,7 +7,7 @@ import DataGraph from '../../components/DataGraph/DataGraph';
 import { ScheduledPayments } from '../../components/ScheduledPayments/ScheduledPayments';
 import PersonalGoal from '../../components/PersonalGoal/PersonalGoal';
 
-export default function Dashboard(){
+export default function Dashboard({card}){
     return(
         <div>
             <div className="page-title">

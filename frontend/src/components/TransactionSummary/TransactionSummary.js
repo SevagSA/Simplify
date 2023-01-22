@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './TransactionSummary.css';
 import { Table, Button } from "reactstrap";
+import {Link} from 'react-router-dom';
 
 class TransactionSummary extends Component{
     constructor(props){
@@ -29,9 +30,8 @@ class TransactionSummary extends Component{
 
     render(){
         return(
-            <div>
-                <Table striped bordered hover>
-                <Button variant="dark">Add Transaction</Button>
+            <div className="scrollabletable special-table">
+                <Table striped bordered hover special-table>
                     <thead>
                         <tr>
                             <th>Source</th>
@@ -39,6 +39,7 @@ class TransactionSummary extends Component{
                             <th>Date</th>
                             <th>Amount</th>
                             <th>Account</th>
+                            <th>Operations</th>
                         </tr>      
                     </thead>
                     <tbody>
@@ -51,7 +52,6 @@ class TransactionSummary extends Component{
 }
 
 function Transaction(props){
-    console.log(props);
     return(
         <tr>
             <td>{props.value['source']}</td>
@@ -59,6 +59,7 @@ function Transaction(props){
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
             <td>{props.value['card']}</td>
+            <td><Button className='somethingcooler7' variant="dark">Delete</Button></td>
         </tr>
     )
 }
