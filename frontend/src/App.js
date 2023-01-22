@@ -16,12 +16,13 @@ import CardForm from './components/CardForm/CardForm';
 import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
 function App(){
-  const [card, setCard] = useState(null);
+  var card = null;
 
   useEffect(() => {
     document.addEventListener('cardChanged', function({ detail }) {
-      setCard(detail);
-    })
+      console.log("DETAIL", detail);
+      card = detail;
+    }, [])
   })
 
   return (
@@ -33,14 +34,13 @@ function App(){
             <Sidebar />
           </div>
           <div className='big-width123'>
-            
               <Routes>
                   <Route path="/" element={null}></Route>
                   <Route path="/dashboard" element={<Dashboard
                     card={card}
                    />}></Route>
                   <Route path="/transactions" element={<Transactions />}></Route>
-                  <Route path="/cards" element={<UserCards />}></Route>
+                  <Route path="/cards" element={<UserCards card={card}/>}></Route>
                   <Route path="/addcard" element={<CardForm />}></Route>
                   <Route path="/addtransaction" element={<TranasctionsForm />}></Route>
                   

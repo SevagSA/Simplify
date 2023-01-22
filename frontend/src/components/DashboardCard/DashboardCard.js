@@ -7,47 +7,21 @@ import {
     CardTitle, CardText, Button
 } from "reactstrap"
 
-
-
 export default function DashboardCard(){
     const [index, setIndex] = useState(0);
-    const [cards, setCards] = useState([
-        {
-            'member':'Malaka',
-            'bank_name':'RBC',
-            'card_number':'1234 5678 9012 3456',
-            'card_type':'Credit',
-            'card_balance':'13000',
-        },
+    const [cards, setCards] = useState([]);
 
-        {
-            'member':'Malak43a',
-            'bank_name':'R533gBC',
-            'card_number':'12343533 5678 9012 3456',
-            'card_type':'Credg54it',
-            'card_balance':'13g454g000',
-        },
-
-        {
-            'member':'Malaka1',
-            'bank_name':'RBC',
-            'card_number':'1234 5678 9012 3456',
-            'card_type':'Credit',
-            'card_balance':'13000',
-        },
-
-        {
-            'member':'Malaka2',
-            'bank_name':'RBC',
-            'card_number':'1234 567ergregge8 9012 3456',
-            'card_type':'g3445',
-            'card_balance':'gergeregr',
-        }
-    ]);
+    const getAllCards = () => {
+        fetch('/transactions/cards/')
+        .then(response => response.json())
+        .then(data => setCards(data));
+    }
 
     useEffect(() => {
         publish('cardChanged', cards[index]);
-      })
+        getAllCards();
+    }, [])
+    
 
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
