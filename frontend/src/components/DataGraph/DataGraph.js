@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import './DataGraph.css';
-import {
-    Card, CardBody,
-    CardTitle, CardText, Button
-} from "reactstrap"
+import '../../../node_modules/react-vis/dist/style.css';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+// import {
+//     Card, CardBody,
+//     CardTitle, CardText, Button
+// } from "reactstrap"
 
 export default class DataGraph extends Component{
     constructor(props){
@@ -16,19 +18,29 @@ export default class DataGraph extends Component{
           <div className="account-card account-card2">
             <div className="full-width123456">
               <div className="small-width123456">
-                <h1 className="sub-title">Expenses statistics</h1>
-              </div>
-              <div className="big-width123456">
-                <select className="title-card1234567" name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
+                <h1 className="sub-title">Balance Analytics</h1>
               </div>
             </div>
             
-            <div class="container-graph"></div>
+            <div className="container-graph">
+              <XYPlot width={375}
+                  height={200}>
+                  <HorizontalGridLines />
+                  <LineSeries
+                    data={[
+                      {x: 1, y: 200},
+                      {x: 2, y: 199},
+                      {x: 3, y: 145},
+                      {x: 4, y: 12},
+                      {x: 5, y: 1000},
+                      {x: 6, y: 52},
+                      {x: 7, y: 168},
+                      {x: 8, y: 88},
+                    ]}/>
+                  <XAxis />
+                  <YAxis />
+              </XYPlot>
+            </div>
           </div>
         );   
     }

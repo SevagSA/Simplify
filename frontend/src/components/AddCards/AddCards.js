@@ -11,7 +11,7 @@ import './AddCards.css';
 
 function AddCard(props){
     return (
-        <Link to="/addcard">Add Card</Link>
+        <Link className='add-button-style' to="/addcard">Add Card</Link>
     );
 }
 
@@ -29,8 +29,12 @@ function EditCard(props){
                     <option>Saving</option>
                 </Input>
             </FormGroup>
-            <Button>Edit Card</Button>
-            <Button>Delete Card</Button>
+            <div className='marginsomethingcool'>
+                <Button className='somethingcooler'>Edit Card</Button>
+                < br/>
+                <Button className='somethingcooler'>Delete Card</Button>
+            </div>
+                
         </Form>
     );
 }

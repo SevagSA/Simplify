@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./SidebarComponent.css";
+import { BrowserRouter, Link } from 'react-router-dom';
 //import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
 
 export default class Sidebar extends Component{
@@ -52,16 +53,16 @@ export default class Sidebar extends Component{
                 </div>
                 <div className="center-left">
                   <div className="full-width small-margin-top">
-                    <h2>Dashboard</h2>
+                    <h2><Link to="/dashboard" style={{ textDecoration: 'none' }} className="sidemenu-links">Dashboard</Link></h2>
                   </div>
                   <div className="full-width small-margin-top">
-                  <h2>Investment tips</h2>
+                    <h2><Link to="/investements" style={{ textDecoration: 'none' }} className="sidemenu-links">Investment Tips</Link></h2>
                   </div>
                   <div className="full-width small-margin-top">
-                  <h2>Transaction</h2>
+                    <h2><Link to="/transactions" style={{ textDecoration: 'none' }} className="sidemenu-links">Transactions</Link></h2>
                   </div>
                   <div className="full-width small-margin-top">
-                  <h2>Cards</h2>
+                    <h2><Link to="/cards" style={{ textDecoration: 'none' }} className="sidemenu-links">Cards</Link></h2>
                   </div>
                 </div>
               </div>
