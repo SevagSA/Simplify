@@ -19,7 +19,6 @@
 .full-width1234 {
     width: 100vw;
     height: 12vh;
-    overflow: hidden !important;
 }
 
 .small-width123 {
@@ -27,7 +26,6 @@
     display:inline; 
     width: 20vw;
     height: 100vh;
-    overflow: hidden !important;
 }
 
 .big-width123 {
@@ -36,7 +34,6 @@
     width: 80vw;
     height: 88vh;
     margin-top: 12vh;
-    overflow: hidden !important;
 }
 
 .top-banner {
