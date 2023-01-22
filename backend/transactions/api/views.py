@@ -1,3 +1,4 @@
+from datetime import date
 import json
 import re
 from django.db.models import Sum
@@ -80,3 +81,53 @@ def sum_of_all_cards_for_member(request):
 @api_view(['GET'])
 def expense_categories(request):
     return Response(json.dumps(settings.EXPENSES_CATEGORY_LIST))
+
+
+"""
+calculate wether a given card's spending amount has went down compared to last month
+calculate wether a given card's income amount has went up compared to last month
+
+return appropriate boolean values for each scenario so that the frontend can display the
+appropriate
+"""
+
+@api_view(['GET'])
+def compare_last_months_spending_for_card(request, pk):
+    today = date.today()
+    month, year = (today.month-1, today.year) if today.month != 1 else (12, today.year-1)
+    pre_month = today.replace(day=1, month=month, year=year)
+
+    last_month_spendings = Expenses.objects.filter(card=pk).filter(is_income=False).filter(
+        date_of_expense__month=pre_month.month).filter(date_of_expense__year=pre_month.year).aggregate(Sum('amount'))
+    last_month_spendings_total = None
+    if last_month_spendings['amount__sum']:
+        last_month_spendings_total = '{:0.2f}'.format(last_month_spendings['amount__sum'])
+
+    current_month_spendings = Expenses.objects.filter(card=pk).filter(is_income=False).filter(
+        date_of_expense__month=today.month).filter(date_of_expense__year=today.year).aggregate(Sum('amount'))
+    current_month_spendings_total = None
+    if current_month_spendings['amount__sum']:
+        current_month_spendings_total = '{:0.2f}'.format(current_month_spendings['amount__sum'])
+
+    return Response({"last month": last_month_spendings_total, "current month": current_month_spendings_total})
+
+
+@api_view(['GET'])
+def compare_last_months_income_for_card(request, pk):
+    today = date.today()
+    month, year = (today.month-1, today.year) if today.month != 1 else (12, today.year-1)
+    pre_month = today.replace(day=1, month=month, year=year)
+
+    last_month_income = Expenses.objects.filter(card=pk).filter(is_income=True).filter(
+        date_of_expense__month=pre_month.month).filter(date_of_expense__year=pre_month.year).aggregate(Sum('amount'))
+    last_month_income_total = None
+    if last_month_income['amount__sum']:
+        last_month_income_total = '{:0.2f}'.format(last_month_income['amount__sum'])
+
+    current_month_income = Expenses.objects.filter(card=pk).filter(is_income=True).filter(
+        date_of_expense__month=today.month).filter(date_of_expense__year=today.year).aggregate(Sum('amount'))
+    current_month_income_total = None
+    if current_month_income['amount__sum']:
+        current_month_income_total = '{:0.2f}'.format(current_month_income['amount__sum'])
+
+    return Response({"last month": last_month_income_total, "current month": current_month_income_total})

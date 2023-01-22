@@ -14,7 +14,7 @@ export default function Transactions(){
             </div>
             <div className="add-button-style sizebutton34">
                 <div className="reposition23">
-                    <Link  className='add-button-style' to="/addtransaction">Add Transaction</Link>
+                    <Link  className='add-button-style' to="/addtransaction">Add transaction</Link>
                 </div>
             </div>
             <div className="special-width">

@@ -18,13 +18,13 @@ export default class DataGraph extends Component{
           <div className="account-card account-card2">
             <div className="full-width123456">
               <div className="small-width123456">
-                <h1 className="sub-title">Balance Analytics</h1>
+                <h1 className="sub-title">Balance analytics</h1>
               </div>
             </div>
             
             <div className="container-graph">
-              <XYPlot width={375}
-                  height={200}>
+              <XYPlot width={400}
+                  height={240}>
                   <HorizontalGridLines />
                   <LineSeries
                     data={[

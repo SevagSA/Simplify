@@ -11,7 +11,7 @@ import './AddCards.css';
 
 function AddCard(props){
     return (
-        <Link className='add-button-style' to="/addcard">Add Card</Link>
+        <Link className='add-button-style' to="/addcard">Add card</Link>
     );
 }
 
@@ -30,28 +30,24 @@ function EditCard(card){
     {console.log(card)}
 
     return (
-        <div>
-            <Form className="form">
-                <FormGroup>
-                    <Label for="availBal">Available Balance</Label>
-                    <Input id="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="accType">Account Type</Label>
-                    <Input type="select" name="accType" id="accType" required>
-                        <option>Debit Card</option>
-                        <option>Credit Card</option>
-                    </Input>
-                </FormGroup>
-                <div className='marginsomethingcool'>
-                    <Button name='editCard' onSubmit={editCard(card)} className='somethingcooler'>Edit Card</Button>
-                </div>  
-            </Form>
-            <div>
-                <Button name='deleteCard' onClick={deleteCard} className='somethingcooler'>Delete Card</Button>
-            </div>
-            
-        </div>
+        <Form className="form">
+            <FormGroup>
+                <Label for="availBal">Available balance</Label>
+                <Input id="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
+            </FormGroup>
+            <FormGroup>
+                <Label for="accType">Account type</Label>
+                <Input type="select" name="accType" id="accType" required>
+                    <option>Debit</option>
+                    <option>Saving</option>
+                </Input>
+            </FormGroup>
+            <div className='marginsomethingcool'>
+                <Button className='somethingcooler'>Edit card</Button>
+                < br/>
+                <Button className='somethingcooler'>Delete card</Button>
+            </div>         
+        </Form>
         
     );
 }
