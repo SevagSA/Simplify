@@ -100,5 +100,5 @@ def alternative_source_generator(prompt):
         model="text-davinci-003",
         prompt=prompt,
         max_tokens=1000,
-        temperature= 0.9)
+        temperature= 0.5)
     return response["choices"][0]["text"]

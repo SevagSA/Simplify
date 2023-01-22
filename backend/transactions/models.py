@@ -25,6 +25,8 @@ class Expenses(models.Model):
     # i.e income vs spending, if its spending, * -1 to do calculations
     is_income = models.BooleanField(default=False)
     category = models.CharField(max_length=13, choices=settings.EXPENSES_CATEGORY)
+    alternative_amount = models.DecimalField(default= 0, max_digits=8, decimal_places=2)
+    alternative_name = models.CharField(max_length=20, unique=True, null= True, blank=True)
 
 
     def __str__(self) -> str:
