@@ -16,7 +16,6 @@ AUTH_USER_MODEL = "member.Member"
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
