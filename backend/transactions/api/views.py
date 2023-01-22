@@ -170,5 +170,3 @@ def get_spendings_for_this_month(request, card):
     for inc in income:
         income_dict[inc[0].day] = str(inc[1])
     return Response(json.dumps(income_dict))
-
-
