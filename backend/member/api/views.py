@@ -18,7 +18,6 @@ def login_member(request):
     return Response({'loggedIn': is_logged_in})
 
 
-
 @api_view(['GET'])
 def is_first_login(request):
     return Response({'isFirstLogin': Member.objects.get(email=settings.MEMBER_EMAIL).is_first_login})

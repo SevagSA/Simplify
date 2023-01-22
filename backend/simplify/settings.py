@@ -135,6 +135,7 @@ CARD_TYPES = (
 ONCE = "One-time"
 DAILY = "Daily"
 WEEKLY = "Weekly"
+BIWEEKLY = "Bi-Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
@@ -176,7 +177,6 @@ EXPENSES_CATEGORY = (
     (INCOME, "Income"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),
-    (MISCELLANEOUS, "Yearly"),
 )
 
 MEMBER_EMAIL = 'john@doe.com'
