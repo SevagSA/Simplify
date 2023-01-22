@@ -8,14 +8,14 @@ import DataGraph from "../DataGraph/DataGraph";
 import {LatestSpendings} from '../../components/LatestSpendings/LatestSpendings'
 import {Link} from 'react-router-dom';
 
-export default function Wallet(){
+export default function Wallet({card}){
     return(
         <div>
             <div className="page-title">
                 <h1 className="title">Wallet</h1>
             </div>
             <div className="special-width">
-                <DataGraph />
+                <DataGraph card={card}/>
                 <div className="asdgsd"></div>
             </div>
             <p>Note: Not all expenses have alternatives</p>
