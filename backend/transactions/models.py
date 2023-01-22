@@ -17,7 +17,7 @@ class Card(models.Model):
 
 class Expenses(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
-    source = models.CharField(max_length=20)
+    source = models.CharField(max_length=20, unique=True)
     amount = models.DecimalField(max_digits=8, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     # if it's recurring, specificy the frequency
     frequency = models.CharField(max_length=17, choices=settings.FREQUENCY_TYPES, default=settings.ONCE)

@@ -78,7 +78,10 @@ def sum_of_all_cards_for_member(request):
 
 
 @api_view(['GET'])
-def open_ai_view(request):
+def open_ai_view(request, source):
+    expense = Expenses.objects.get(source = source)
+    #if(expense.source == )
+
     openai.api_key = settings.OPEN_AI_API_KEY
 
     prompt = f"Generate a list of milk prices, in JSON format with only name and price fields, and 3 entries"
