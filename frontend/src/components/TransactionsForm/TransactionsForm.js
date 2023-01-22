@@ -16,7 +16,7 @@ function TransactionsForm(props){
             <div className='losingtheplot'>
                 <Form className="form">
                     <FormGroup>
-                        <Label for="sourceVal">Transaction Source</Label>
+                        <Label for="sourceVal">Transaction source</Label>
                         <Input id="sourceVal" type="text" placeholder='Source' required/>
                     </FormGroup>
                     <FormGroup>
@@ -31,23 +31,23 @@ function TransactionsForm(props){
                     <FormGroup>
                         <Label for="tranFreq">Frequency</Label>
                         <Input type="select" name="accType" id="tranFreq" required>
-                            <option>One-Time</option>
+                            <option>One-time</option>
                             <option>Daily</option>
                             <option>Weekly</option>
-                            <option>Bi-Weekly</option>
+                            <option>Bi-weekly</option>
                             <option>Monthly</option>
                             <option>Yearly</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label for='tranDate'>Date of Transaction</Label>
+                        <Label for='tranDate'>Date of transaction</Label>
                         <Input type='date' id='tranDate' required/>
                     </FormGroup>
                     <FormGroup>
                         <Label for="tranAmnt">Amount</Label>
                         <Input id="tranAmnt" type="number" min="1" step=".01" placeholder='99.99' required/>
                     </FormGroup>
-                    <Button className='somethingcooler wrtfbnbfdvc'>Add Transaction</Button>
+                    <Button className='somethingcooler wrtfbnbfdvc'>Add transaction</Button>
                 </Form>
             </div>
         </div>

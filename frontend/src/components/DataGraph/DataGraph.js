@@ -18,7 +18,7 @@ export default class DataGraph extends Component{
           <div className="account-card account-card2">
             <div className="full-width123456">
               <div className="small-width123456">
-                <h1 className="sub-title">Balance Analytics</h1>
+                <h1 className="sub-title">Balance analytics</h1>
               </div>
             </div>
             
