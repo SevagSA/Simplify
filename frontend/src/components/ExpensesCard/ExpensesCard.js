@@ -16,7 +16,8 @@ export default class ExpensesCard extends Component{
                         </svg>
                     </div>
                     <div className="half-right">
-                        sdfgsdfg
+                        <h2 className="no-paddmarg smaller-size">Income</h2>
+                        <h4 class="something-cool no-paddmarg">$ 1,000</h4>
                     </div>
                 </div>
                 <div className='half-card-right'>
@@ -26,7 +27,8 @@ export default class ExpensesCard extends Component{
                         </svg>
                     </div>
                     <div className="half-right">
-                        42565trhb
+                        <h2 className="no-paddmarg smaller-size">Spendings</h2>
+                        <h4 class="something-cool no-paddmarg">$ 1,200</h4>
                     </div>
                 </div>
             </div>
