@@ -14,7 +14,7 @@ import DashboardCard from "../DashboardCard/DashboardCard";
 import { ScheduledPayments } from "../ScheduledPayments/ScheduledPayments";
 import { EditCard, AddCard } from "../AddCards/AddCards";
 
-export default function UserCards(){
+export default function UserCards({card}){
     return(
         <div>
             <div className="page-title">
@@ -23,13 +23,12 @@ export default function UserCards(){
             <div className="special-width">
                 <div className="add-button-style sizebutton">
                     <div className="reposition">
-                        <AddCard />
+                        <AddCard card={card}/>
                     </div>
                 </div>
-                <DashboardCard />
+                    <DashboardCard />
                 <div className="asdgsd"></div>
-
-                <EditCard />
+                <EditCard card={card}/>
             </div>
         </div>
     );

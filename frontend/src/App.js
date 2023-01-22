@@ -17,12 +17,12 @@ import Wallet from './components/Wallet/Wallet';
 import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
 function App(){
-  const [card, setCard] = useState(null);
+  const [card, setCard] = useState({});
 
   useEffect(() => {
     document.addEventListener('cardChanged', function({ detail }) {
       setCard(detail);
-    })
+    }, [])
   })
 
   return (
@@ -34,7 +34,7 @@ function App(){
             <Sidebar />
           </div>
           <div className='big-width123'>
-            
+              {/* {console.log('SEVAG', card)} */}
               <Routes>
                   <Route path="/" element={null}></Route>
                   <Route path="/dashboard" element={<Dashboard
@@ -42,7 +42,7 @@ function App(){
                    />}></Route>
                   <Route path="/wallet" element={<Wallet />}></Route>
                   <Route path="/transactions" element={<Transactions />}></Route>
-                  <Route path="/cards" element={<UserCards />}></Route>
+                  <Route path="/cards" element={<UserCards card={card}/>}></Route>
                   <Route path="/addcard" element={<CardForm />}></Route>
                   <Route path="/addtransaction" element={<TranasctionsForm />}></Route>
                   

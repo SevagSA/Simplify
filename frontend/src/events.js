@@ -1,6 +1,16 @@
-function publish(eventName, data) {
+function getCards(){
+    return fetch('/transactions/cards/')
+            .then(response => response.json())
+            .then(data => data);
+}
+
+async function publish(eventName, data) {
+    if (data == null){
+        const cards = await getCards();
+        data = cards[0];
+    }
     const event = new CustomEvent(eventName, { detail: data });
-document.dispatchEvent(event);
+    document.dispatchEvent(event);
 }
 
 export {publish};
