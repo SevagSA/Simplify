@@ -17,6 +17,6 @@ urlpatterns = [
     path('cards/<int:card>/<int:month>/<int:year>/<is_income>/', get_expenses_for_month),
     path('cards/sum-of-all/', sum_of_all_cards_for_member),
 
-    path('open-ai/<source>', open_ai_view)
+    path('open-ai/<source>/', open_ai_view)
 
 ]

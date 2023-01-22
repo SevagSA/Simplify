@@ -79,14 +79,18 @@ def sum_of_all_cards_for_member(request):
 
 @api_view(['GET'])
 def open_ai_view(request, source):
-    expense = Expenses.objects.get(source=source)
+    try:
+        expense = Expenses.objects.get(source__iexact=source)
+    except Expenses.DoesNotExist:
+        return Response({"message":"Expense with given name does not exist."})
+
     alternatives = []
     if expense.category == settings.FOOD:
-        prompt = f"Generate a list of {source} prices, in JSON format with only name and price fields, and 3 entries"
+        prompt = f"Generate a list of cheap {source} prices, in JSON format with only name and price fields, and 3 entries"
         alternatives = alternative_source_generator(prompt)
         
     return Response(json.loads(alternatives))
-    
+
 
 def alternative_source_generator(prompt):       
     openai.api_key = settings.OPEN_AI_API_KEY
