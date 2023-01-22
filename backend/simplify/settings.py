@@ -48,6 +48,10 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'simplify.urls'
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[],
+    'DEFAULT_PERMISSION_CLASSES':[]
+}
 
 TEMPLATES = [
     {
@@ -188,3 +192,4 @@ EXPENSES_CATEGORY = (
 MEMBER_EMAIL = 'john@doe.com'
 MEMBER_PASSWORD = 'theepicduck'
 OPEN_AI_API_KEY = env('OPEN_AI_API_KEY')
+

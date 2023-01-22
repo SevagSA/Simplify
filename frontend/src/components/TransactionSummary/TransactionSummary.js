@@ -8,19 +8,24 @@ class TransactionSummary extends Component{
         super(props);
 
         this.state={
-            transactions: Array(30).fill({
-                "card":"1",
-                "source":"2",
-                "amount":"3",
-                "frequency":"4",
-                "date_of_expense":"5",
-                "is_income":"6",
-                "category":"7",
-            }),
+            transactions: [],
         }
     }
 
+    getAllTransactions(){
+        fetch(`/transactions/expenses/card/${this.props.card.id}/`)
+        .then(response => response.json())
+        .then(data => this.setState({transactions:data}));
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.card.id != prevProps.card.id){
+            this.getAllTransactions();
+        } 
+    }
+
     renderTransactions(){
+        console.log(this.state)
         var transactions = this.state.transactions.slice().map((item, i) => {
             return <Transaction key={i} value={item} />
         });
@@ -39,7 +44,7 @@ class TransactionSummary extends Component{
                             <th>Date</th>
                             <th>Amount</th>
                             <th>Account</th>
-                            <th>Operations</th>
+                            {/* <th>Operations</th> */}
                         </tr>      
                     </thead>
                     <tbody>
@@ -58,8 +63,8 @@ function Transaction(props){
             <td>{props.value['category']}</td>
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
-            <td>{props.value['card']}</td>
-            <td><Button className='somethingcooler7' variant="dark">Delete</Button></td>
+            <td>John Doe</td>
+            {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
         </tr>
     )
 }
