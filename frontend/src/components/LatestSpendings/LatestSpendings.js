@@ -35,7 +35,7 @@ function Spendings(props){
         //     <h5>{props.value}</h5>
         // </div>
 
-        <div className='full-width12345asdf22'>
+        <div className='full-width12345asdf22 dslkhgdflaksdlkgdfg'>
             <div id="category-icon" className="category-miscellaneous account-card45 new-widthisgood2">
                 
             </div>
