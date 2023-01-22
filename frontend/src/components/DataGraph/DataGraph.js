@@ -8,7 +8,7 @@ import {
 export default class DataGraph extends Component{
     constructor(props){
         super(props)
-        
+  
     }
 
     render(){
