@@ -1,10 +1,12 @@
-import { Component, useState } from "react";
+import { Component, useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import "./DashboardCard.css";
+import {publish} from "../../events";
 import {
     Card, CardBody,
     CardTitle, CardText, Button
 } from "reactstrap"
+
 
 
 export default function DashboardCard(){
@@ -43,8 +45,13 @@ export default function DashboardCard(){
         }
     ]);
 
+    useEffect(() => {
+        publish('cardChanged', cards[index]);
+      })
+
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
+        publish('cardChanged', cards[selectedIndex]);
     };
     
     return (
