@@ -23,8 +23,8 @@ export default class DataGraph extends Component{
             </div>
             
             <div className="container-graph">
-              <XYPlot width={375}
-                  height={200}>
+              <XYPlot width={400}
+                  height={240}>
                   <HorizontalGridLines />
                   <LineSeries
                     data={[
