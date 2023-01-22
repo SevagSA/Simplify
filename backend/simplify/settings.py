@@ -30,12 +30,13 @@ INSTALLED_APPS = [
     'member',
     'transactions',
     # 3rd party
-    'rest_framework'
-
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -45,6 +46,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'simplify.urls'
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+
 
 TEMPLATES = [
     {
