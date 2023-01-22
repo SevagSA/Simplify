@@ -22,7 +22,7 @@ export default class DataGraph extends Component{
               </div>
             </div>
             
-            <div class="container-graph">
+            <div className="container-graph">
               <XYPlot width={375}
                   height={200}>
                   <HorizontalGridLines />

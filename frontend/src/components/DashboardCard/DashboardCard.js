@@ -49,9 +49,9 @@ export default function DashboardCard(){
     
     return (
         <Carousel activeIndex={index} onSelect={handleSelect} interval={null} variant='dark' controls={true}>
-            {cards.map((card)=> {
+            {cards.map((card, i)=> {
                     return (
-                        <Carousel.Item key={card.number}>
+                        <Carousel.Item key={i}>
                             <div className="account-card">
                                     <div className='full-width123456'>
                                         <div className='small-width123456'>
