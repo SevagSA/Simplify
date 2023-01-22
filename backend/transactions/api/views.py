@@ -149,7 +149,17 @@ def get_income_for_this_month(request, card):
             "date_of_expense__day").values_list("date_of_expense", "amount")
     income_dict = {}
     for inc in income:
-        print(inc[0], inc[1])
         income_dict[inc[0].day] = str(inc[1])
     return Response(json.dumps(income_dict))
     
+
+@api_view(['GET'])
+def get_spendings_for_this_month(request, card):
+    today = date.today()
+    income = Expenses.objects.filter(card=card).filter(is_income=False).filter(
+        date_of_expense__month=today.month).order_by(
+            "date_of_expense__day").values_list("date_of_expense", "amount")
+    income_dict = {}
+    for inc in income:
+        income_dict[inc[0].day] = str(inc[1])
+    return Response(json.dumps(income_dict))
