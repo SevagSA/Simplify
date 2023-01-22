@@ -19,7 +19,7 @@
 .container-graph {
     width: 27vw !important;
     text-align: left !important;
-    background-color: black;
+    /* background-color: black; */
     margin-top: 3vh;
     height: 25.25vh;
 }
