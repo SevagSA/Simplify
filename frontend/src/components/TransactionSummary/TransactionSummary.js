@@ -44,6 +44,7 @@ class TransactionSummary extends Component{
                             <th>Date</th>
                             <th>Amount</th>
                             <th>Account</th>
+                            <th>Bank</th>
                             {/* <th>Operations</th> */}
                         </tr>      
                     </thead>
@@ -57,6 +58,7 @@ class TransactionSummary extends Component{
 }
 
 function Transaction(props){
+    console.log(props);
     return(
         <tr>
             <td>{props.value['source']}</td>
@@ -64,6 +66,9 @@ function Transaction(props){
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
             <td>John Doe</td>
+            <td>{
+                ['RBC','TD','National Bank','BMO','Scotia'][Math.floor(Math.random() * 5)]
+            }</td>
             {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
         </tr>
     )

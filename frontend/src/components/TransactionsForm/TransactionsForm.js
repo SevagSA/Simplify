@@ -8,7 +8,6 @@ import {
   } from 'reactstrap';
 
 function CreateTransaction(e){
-    console.log("create trans")
     e.preventDefault();
     fetch(`/transactions/expenses/`, {
         method: 'POST',
