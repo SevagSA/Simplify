@@ -30,9 +30,8 @@ class TransactionSummary extends Component{
 
     render(){
         return(
-            <div>
-                <Button variant="dark"><Link to="/addtransaction" style={{ textDecoration: 'none' }}>Add Transaction</Link></Button>
-                <Table striped bordered hover>
+            <div className="scrollabletable special-table">
+                <Table striped bordered hover special-table>
                     <thead>
                         <tr>
                             <th>Source</th>
@@ -60,7 +59,7 @@ function Transaction(props){
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
             <td>{props.value['card']}</td>
-            <td><Button variant="dark">Dark</Button></td>
+            <td><Button className='somethingcooler7' variant="dark">Dark</Button></td>
         </tr>
     )
 }
