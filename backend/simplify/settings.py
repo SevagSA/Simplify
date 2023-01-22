@@ -138,6 +138,10 @@ BIWEEKLY = "Bi-Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
+FREQUENCY_TYPES_LIST = [
+    ONCE, DAILY, WEEKLY, BIWEEKLY, MONTHLY, YEARLY
+]
+
 FREQUENCY_TYPES = (
     (ONCE, "One-time"),
     (DAILY, "Daily"),
@@ -160,7 +164,6 @@ BANK_TYPES = (
     (NATIONAL, "National Bank"),
     (BMO, "BMO"),
     (SCOTIA, "Scotia Bank")
-
 )
 
 # Expense Category
@@ -169,13 +172,14 @@ FOOD = "Food"
 HOUSING = "Housing"
 ENTERTAINMENT = "Entertainment"
 MISCELLANEOUS = "Miscellaneous"
-INCOME = "Income"
+
+EXPENSES_CATEGORY_LIST = [FOOD, HOUSING, ENTERTAINMENT, MISCELLANEOUS]
 
 EXPENSES_CATEGORY = (
     (FOOD, "Food"),
-    (INCOME, "Income"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),
+    (MISCELLANEOUS, "Miscellaneous"),
 )
 
 MEMBER_EMAIL = 'john@doe.com'

@@ -76,3 +76,7 @@ def sum_of_all_cards_for_member(request):
     sum_of_cards = Card.objects.filter(member=member).aggregate(Sum('card_balance'))
     return Response(str(sum_of_cards['card_balance__sum']))
 
+
+@api_view(['GET'])
+def expense_categories(request):
+    return Response(json.dumps(settings.EXPENSES_CATEGORY_LIST))
