@@ -14,7 +14,7 @@ class ScheduledPayments extends Component{
     }
 
     renderPayments(){
-        var expenses = this.state.payments.slice(0,5).map((item, i) => {
+        var expenses = this.state.payments.slice(0,3).map((item, i) => {
             return <Payment key={i} value={item} />
         });
     
@@ -23,8 +23,8 @@ class ScheduledPayments extends Component{
 
     render(){
         return(
-            <div>
-                <h5>Scheduled Payments</h5>
+            <div className="margin-top-specific4">
+                <h1 className="sub-title">Scheduled payments</h1>
                 <div className="d-flex p-2 flex-row">
                     {this.renderPayments()}
                 </div>
@@ -36,13 +36,11 @@ class ScheduledPayments extends Component{
 function Payment(props){
     return (
     <div>
-        <Card>
-            <CardBody>
-                <CardTitle tag="h5">Sample Card title</CardTitle>
-                <CardText>Sample Card Text to display!</CardText>
-                <Button>Action Button</Button>
-            </CardBody>
-        </Card>
+        <div className="scheduledCard margin-left3">
+            <h1 className="title-card123 margin-top-custom">$11.99/m</h1>
+            <div className="user-picture icon-picture2"></div>
+            <h1 className="title-card1234789">Ps5 Game</h1>
+        </div>
     </div>
     );
 }

@@ -19,7 +19,7 @@ class LatestSpendings extends Component{
 
     render(){
         return (
-        <div>
+        <div className='margin-top-specific2'>
             <h5>Latest Spendings</h5>
             <div className="d-flex p-2 flex-column">
                 {this.renderExpenses()}

@@ -11,10 +11,16 @@ export default class PersonalGoal extends Component{
 
     render(){
         return (
-            <div>
-                <h2>Personal Goal</h2>
-                <p>$1000 / $2000</p>
-                <progress value="50" max="100"> 32% </progress>
+            <div className="margin-top-specific"  >
+                <div className='full-width123456 something123'>
+                    <div className='small-width123456 something123'>
+                        <h2 className="something123">Personal Goal</h2>
+                    </div>
+                    <div className='big-width123456789 something123'>
+                        <h2 className="align-right123 something123">$1000 / $2000</h2>
+                    </div>
+                </div>
+                <progress className="progress-self" value="50" max="100"> 32% </progress>
             </div>
         );
 

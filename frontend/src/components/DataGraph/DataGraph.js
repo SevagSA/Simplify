@@ -13,13 +13,23 @@ export default class DataGraph extends Component{
 
     render(){
         return (
-            <Card>
-                <CardBody>
-                    <CardTitle tag="h5">Sample Card title</CardTitle>
-                    <CardText>Sample Card Text to display!</CardText>
-                    <Button>Action Button</Button>
-                </CardBody>
-            </Card>
+          <div className="account-card account-card2">
+            <div className="full-width123456">
+              <div className="small-width123456">
+                <h1 className="sub-title">Expenses statistics</h1>
+              </div>
+              <div className="big-width123456">
+                <select className="title-card1234567" name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="container-graph"></div>
+          </div>
         );   
     }
 }

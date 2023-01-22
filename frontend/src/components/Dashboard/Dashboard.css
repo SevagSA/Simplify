@@ -1,0 +1,45 @@
+.width-40 {
+    float:left; 
+    display:inline; 
+    width: 40vw;
+    height: 88vh;
+    padding: 0vh 5.5vw 1vh 5.5vw;
+}
+
+.full-width12345 {
+    width: 80vw;
+    height: 88vh;
+}
+
+.page-title {
+    padding-left: 5.5vw;
+    padding-top: 2vh;
+}
+
+.title {
+    color: black;
+    font-weight: normal !important;
+    font-size: 32px;
+    padding-bottom: 0.75vh;
+}
+
+.card-styling {
+    border-radius: 1vw;
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,.25);
+}
+
+.margin-top-specific {
+    margin-top: 9vh !important;
+}
+
+.margin-top-specific2 {
+    margin-top: 7.7vh !important;
+}
+
+.margin-top-specific3 {
+    margin-top: 8vh !important;
+}
+
+.margin-top-specific4 {
+    margin-top: 22.5vh !important;
+}
