@@ -6,7 +6,7 @@ import { TransactionSummary } from "../TransactionSummary/TransactionSummary";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import {Link} from 'react-router-dom';
 
-export default function Transactions(){
+export default function Transactions({card}){
     return(
         <div>
             <div className="page-title">
@@ -23,7 +23,7 @@ export default function Transactions(){
             </div>
             <div className="fdgkalsdjfae">
                 <h1 className="sub-title2">Transactions summary</h1>
-                <TransactionSummary />
+                <TransactionSummary card={card}/>
             </div>
         </div>
     );
