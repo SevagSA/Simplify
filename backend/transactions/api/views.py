@@ -46,7 +46,7 @@ def delete_card(request):
 @api_view(['GET'])
 def get_all_expenses_for_card(request, card):
     expenses = Expenses.objects.filter(card=card)
-    serializer = ExpensesSerializer(spendings,many=True)
+    serializer = ExpensesSerializer(expenses, many=True)
     return Response(serializer.data)
 
 
@@ -170,5 +170,3 @@ def get_spendings_for_this_month(request, card):
     for inc in income:
         income_dict[inc[0].day] = str(inc[1])
     return Response(json.dumps(income_dict))
-
-

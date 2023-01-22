@@ -33,5 +33,5 @@ urlpatterns = [
     
     path('cards/<int:card>/get-all-spendings/', get_spendings_for_this_month),
 
-    path('expenses/card/<int:cardId>/', get_all_expenses_for_card)
+    path('expenses/card/<int:card>/', get_all_expenses_for_card)
 ]
