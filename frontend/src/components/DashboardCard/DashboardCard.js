@@ -8,13 +8,19 @@ import {
 export default class DashboardCard extends Component{
     render(){
         return (
-            <Card>
-                <CardBody>
-                    <CardTitle tag="h5">Sample Card title</CardTitle>
-                    <CardText>Sample Card Text to display!</CardText>
-                    <Button>Action Button</Button>
-                </CardBody>
-            </Card>
+            <div className="account-card">
+                <div className='full-width123456'>
+                    <div className='small-width123456'>
+                        <h1 className="title-card123">Available balance</h1>
+                    </div>
+                    <div className='big-width123456'>
+                        <h1 className="title-card123456">Credit</h1>
+                    </div>
+                </div>
+                
+                <p className="text-cardaccount">$ 14,000.00</p>
+                <h1 className="title-card1234">**** 1234</h1>
+            </div>
         );
         
     }

@@ -8,11 +8,14 @@ function App(){
       {/* <header className="App-header">
         
       </header> */}
-      <div>
-        <Sidebar />
-      </div>
-      <div>
-        <Dashboard />
+      <div className='top-banner full-width1234'></div>
+      <div className='menu-items123 full-width123'>
+        <div className='small-width123'>
+          <Sidebar />
+        </div>
+        <div className='big-width123'>
+          <Dashboard />
+        </div>
       </div>
     </div>
   );

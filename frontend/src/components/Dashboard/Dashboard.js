@@ -11,15 +11,20 @@ import PersonalGoal from '../../components/PersonalGoal/PersonalGoal';
 export default function Dashboard(){
     return(
         <div>
-            <h1>Dashboard</h1>
-            <div>
-                <DashboardCard />
-                <ExpensesCard />
-                <MonthlyPayments />
-                <LatestSpendings />
-                <DataGraph />
-                <ScheduledPayments />
-                <PersonalGoal />
+            <div className="page-title">
+                <h1 className="title">Dashboard</h1>
+            </div>
+            <div className='full-width12345'>
+                <div className='width-40'>
+                    <DashboardCard />
+                    <PersonalGoal />
+                    <ExpensesCard />
+                    <LatestSpendings />
+                </div>
+                <div className='width-40'>
+                    <DataGraph />
+                    <ScheduledPayments />
+                </div>
             </div>
         </div>
     );
