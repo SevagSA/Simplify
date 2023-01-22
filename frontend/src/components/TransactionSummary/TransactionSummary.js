@@ -51,7 +51,6 @@ class TransactionSummary extends Component{
 }
 
 function Transaction(props){
-    console.log(props);
     return(
         <tr>
             <td>{props.value['source']}</td>
