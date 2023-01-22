@@ -13,6 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Transactions from './components/Transactions/Transactions';
 import UserCards from './components/UserCards/UserCards';
 import CardForm from './components/CardForm/CardForm';
+import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
 var test = null;
 
@@ -43,6 +44,7 @@ function App(){
                   <Route path="/transactions" element={<Transactions />}></Route>
                   <Route path="/cards" element={<UserCards />}></Route>
                   <Route path="/addcard" element={<CardForm />}></Route>
+                  <Route path="/addtransaction" element={<TranasctionsForm />}></Route>
                   
                   {/* <Route index element={<Home />} />
                   <Route path="blogs" element={<Blogs />} />np
