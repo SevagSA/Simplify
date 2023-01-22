@@ -1,6 +1,5 @@
 import json
 import re
-import openai
 from django.db.models import Sum
 from transactions.models import Expenses, Card
 from member.models import Member
@@ -77,37 +76,3 @@ def sum_of_all_cards_for_member(request):
     sum_of_cards = Card.objects.filter(member=member).aggregate(Sum('card_balance'))
     return Response(str(sum_of_cards['card_balance__sum']))
 
-
-@api_view(['GET'])
-def open_ai_view(request, source):
-    try:
-        expense = Expenses.objects.get(source__iexact=source)
-    except Expenses.DoesNotExist:
-        return Response({"message":"Expense with given name does not exist."})
-
-    alternatives = []
-    if expense.category == settings.FOOD:
-        prompt = f"Generate a list of different company {source} prices different than {source}, in JSON format with only name and price fields, and 3 entries"
-        alternatives = alternative_source_generator(prompt)
-        alternatives_json = json.loads(alternatives)
-        cheapest_alternative = sorted(alternatives_json, key=lambda d: d['price'])[0]
-        cheapest_name = cheapest_alternative['name']
-        cheapest_string = cheapest_alternative['price']
-        cheapest_value = re.findall("\d+\.\d+",cheapest_string)[0]
-        expense.alternative_amount = cheapest_value
-        expense.alternative_name = cheapest_name
-        expense.save()
-    elif expense.category == settings.ENTERTAINMENT:
-        prompt = f"Generate a list of different company {source} subscriptions than {source}, in JSON format with only name and price fields, and 3 entries"
-        alternatives = alternative_source_generator(prompt)
-    return Response(json.loads(alternatives))
-
-
-def alternative_source_generator(prompt):       
-    openai.api_key = settings.OPEN_AI_API_KEY
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        max_tokens=1000,
-        temperature= 0.5)
-    return response["choices"][0]["text"]
