@@ -8,6 +8,7 @@ import {
   } from 'reactstrap';
 
 function CreateTransaction(e){
+    console.log("create trans")
     e.preventDefault();
     fetch(`/transactions/expenses/`, {
         method: 'POST',
@@ -18,6 +19,9 @@ function CreateTransaction(e){
                 frequence:e.target.tranFreq.value,
                 amount:e.target.tranAmnt.value,
                 is_income:e.target.isIncome.value,
+                alternative_amount:0,
+                alternative_name:"",
+                card:1,
                 member:1
             }),
             headers: {
@@ -31,7 +35,7 @@ function CreateTransaction(e){
     window.location.reload(true);
 }
   
-function TransactionsForm(){
+function TransactionsForm(card){
     return (
         <div>
             <div className="page-title">
@@ -42,10 +46,11 @@ function TransactionsForm(){
                     <FormGroup>
                         <Label for="sourceVal">Transaction source</Label>
                         <Input id="sourceVal" type="text" placeholder='Source' required/>
+                        <Input name="cardId" value={card.id} hidden/>
                     </FormGroup>
                     <FormGroup>
                         <Label for="category">Category</Label>
-                        <Input type="select" name="category" id="category" required>
+                        <Input type="select" name="category" id="category">
                             <option>Food</option>
                             <option>Housing</option>
                             <option>Entertainement</option>
@@ -72,7 +77,7 @@ function TransactionsForm(){
                     </FormGroup>
                     <FormGroup>
                         <Label for='isIncome'>Is this income?</Label>
-                        <Input type='checkbox' id='isIncome' required/>
+                        <Input type='checkbox' id='isIncome'/>
                     </FormGroup>
                     <Button className='somethingcooler wrtfbnbfdvc'>Add transaction</Button>
                 </Form>

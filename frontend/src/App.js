@@ -43,8 +43,8 @@ function App(){
                   <Route path="/wallet" element={<Wallet />}></Route>
                   <Route path="/transactions" element={<Transactions card={card}/>}></Route>
                   <Route path="/cards" element={<UserCards card={card}/>}></Route>
-                  <Route path="/addcard" element={<CardForm />}></Route>
-                  <Route path="/addtransaction" element={<TranasctionsForm />}></Route>
+                  <Route path="/addcard" element={<CardForm card={card}/>}></Route>
+                  <Route path="/addtransaction" element={<TranasctionsForm card={card}/>}></Route>
                   
                   {/* <Route index element={<Home />} />
                   <Route path="blogs" element={<Blogs />} />np
