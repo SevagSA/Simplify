@@ -79,17 +79,20 @@ def sum_of_all_cards_for_member(request):
 
 @api_view(['GET'])
 def open_ai_view(request, source):
-    expense = Expenses.objects.get(source = source)
-    #if(expense.source == )
+    expense = Expenses.objects.get(source=source)
+    alternatives = []
+    if expense.category == settings.FOOD:
+        prompt = f"Generate a list of {source} prices, in JSON format with only name and price fields, and 3 entries"
+        alternatives = alternative_source_generator(prompt)
+        
+    return Response(json.loads(alternatives))
+    
 
+def alternative_source_generator(prompt):       
     openai.api_key = settings.OPEN_AI_API_KEY
-
-    prompt = f"Generate a list of milk prices, in JSON format with only name and price fields, and 3 entries"
     response = openai.Completion.create(
-    model="text-davinci-003",
-    prompt=prompt,
-    max_tokens=1000,
-    temperature= 0.3
-    )
-    txt = response["choices"][0]["text"]
-    return Response(json.loads(txt))
+        model="text-davinci-003",
+        prompt=prompt,
+        max_tokens=1000,
+        temperature= 0.3)
+    return response["choices"][0]["text"]
