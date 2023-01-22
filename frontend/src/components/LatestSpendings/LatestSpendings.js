@@ -36,7 +36,7 @@ function Spendings(props){
         // </div>
 
         <div className='full-width12345asdf22'>
-            <div className="account-card45 new-widthisgood2">
+            <div id="category-icon" className="category-miscellaneous account-card45 new-widthisgood2">
                 
             </div>
             
