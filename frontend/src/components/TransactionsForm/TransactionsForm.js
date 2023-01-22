@@ -12,11 +12,12 @@ function CreateTransaction(e){
     fetch(`/transactions/expenses/`, {
         method: 'POST',
             body: JSON.stringify({
-                source:e.target.availBal.value,
-                category:e.target.accType.value,
-                date_of_expense:e.target.cardNum.value,
-                frequence:e.target.fre.value,
+                source:e.target.sourceVal.value,
+                category:e.target.category.value,
+                date_of_expense:e.target.tranDate.value,
+                frequence:e.target.tranFreq.value,
                 amount:e.target.tranAmnt.value,
+                is_income:e.target.isIncome.value,
                 member:1
             }),
             headers: {
@@ -44,7 +45,7 @@ function TransactionsForm(){
                     </FormGroup>
                     <FormGroup>
                         <Label for="category">Category</Label>
-                        <Input type="select" name="accType" id="category" required>
+                        <Input type="select" name="category" id="category" required>
                             <option>Food</option>
                             <option>Housing</option>
                             <option>Entertainement</option>
@@ -53,7 +54,7 @@ function TransactionsForm(){
                     </FormGroup>
                     <FormGroup>
                         <Label for="tranFreq">Frequency</Label>
-                        <Input type="select" name="accType" id="tranFreq" required>
+                        <Input type="select" name="tranFreq" id="tranFreq" required>
                             <option>One-time</option>
                             <option>Daily</option>
                             <option>Weekly</option>
@@ -68,6 +69,10 @@ function TransactionsForm(){
                     <FormGroup>
                         <Label for="tranAmnt">Amount</Label>
                         <Input id="tranAmnt" type="number" min="1" step=".01" placeholder='99.99' required/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='isIncome'>Is this income?</Label>
+                        <Input type='checkbox' id='isIncome' required/>
                     </FormGroup>
                     <Button className='somethingcooler wrtfbnbfdvc'>Add transaction</Button>
                 </Form>

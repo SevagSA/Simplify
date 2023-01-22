@@ -20,7 +20,7 @@ export default function Dashboard({card}){
                     <LatestSpendings />
                 </div>
                 <div className='width-40'>
-                    <DataGraph />
+                    <DataGraph card={card}/>
                     <ExpensesCard />
                     <ScheduledPayments />
                 </div>

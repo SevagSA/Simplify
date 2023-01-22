@@ -10,10 +10,11 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 export default class DataGraph extends Component{
     constructor(props){
         super(props)
-  
+
     }
 
     render(){
+      console.log(this.props);
         return (
           <div className="account-card account-card2">
             <div className="full-width123456">
