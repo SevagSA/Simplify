@@ -181,3 +181,4 @@ EXPENSES_CATEGORY = (
 
 MEMBER_EMAIL = 'john@doe.com'
 MEMBER_PASSWORD = 'theepicduck'
+OPEN_AI_API_KEY = env('OPEN_AI_API_KEY')

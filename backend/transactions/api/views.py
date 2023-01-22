@@ -1,3 +1,5 @@
+import json
+import openai
 from django.db.models import Sum
 from transactions.models import Expenses, Card
 from member.models import Member
@@ -73,3 +75,18 @@ def sum_of_all_cards_for_member(request):
     member = Member.objects.get(email=settings.MEMBER_EMAIL)
     sum_of_cards = Card.objects.filter(member=member).aggregate(Sum('card_balance'))
     return Response(str(sum_of_cards['card_balance__sum']))
+
+
+@api_view(['GET'])
+def open_ai_view(request):
+    openai.api_key = settings.OPEN_AI_API_KEY
+
+    prompt = f"Generate a list of milk prices, in JSON format with only name and price fields, and 3 entries"
+    response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=prompt,
+    max_tokens=1000,
+    temperature= 0.3
+    )
+    txt = response["choices"][0]["text"]
+    return Response(json.loads(txt))
