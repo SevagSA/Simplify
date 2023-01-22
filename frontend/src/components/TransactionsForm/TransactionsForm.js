@@ -7,21 +7,44 @@ import {
     Label
   } from 'reactstrap';
 
-function TransactionsForm(props){
+function CreateTransaction(e){
+    e.preventDefault();
+    fetch(`/transactions/expenses/`, {
+        method: 'POST',
+            body: JSON.stringify({
+                source:e.target.availBal.value,
+                category:e.target.accType.value,
+                date_of_expense:e.target.cardNum.value,
+                frequence:e.target.fre.value,
+                amount:e.target.tranAmnt.value,
+                member:1
+            }),
+            headers: {
+                "Content-Type": "application/json",
+                'X-CSRFToken':'habibi',
+            },
+        }
+    )
+    .then(response => response.json())
+    .then(json => console.log(json));
+    window.location.reload(true);
+}
+  
+function TransactionsForm(){
     return (
         <div>
             <div className="page-title">
-                <h1 className="title">Add transactions</h1>
+                <h1 className="title">Add transaction</h1>
             </div>
             <div className='losingtheplot'>
-                <Form className="form">
+                <Form onSubmit={CreateTransaction} className="form">
                     <FormGroup>
                         <Label for="sourceVal">Transaction source</Label>
                         <Input id="sourceVal" type="text" placeholder='Source' required/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="accType">Category</Label>
-                        <Input type="select" name="accType" id="accType" required>
+                        <Label for="category">Category</Label>
+                        <Input type="select" name="accType" id="category" required>
                             <option>Food</option>
                             <option>Housing</option>
                             <option>Entertainement</option>
@@ -34,7 +57,6 @@ function TransactionsForm(props){
                             <option>One-time</option>
                             <option>Daily</option>
                             <option>Weekly</option>
-                            <option>Bi-weekly</option>
                             <option>Monthly</option>
                             <option>Yearly</option>
                         </Input>

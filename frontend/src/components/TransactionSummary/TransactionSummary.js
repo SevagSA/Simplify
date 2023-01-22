@@ -63,7 +63,7 @@ function Transaction(props){
             <td>{props.value['category']}</td>
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
-            <td>{props.value['card']}</td>
+            <td>John Doe</td>
             {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
         </tr>
     )
