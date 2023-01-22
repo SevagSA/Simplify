@@ -39,7 +39,7 @@ function App(){
                   <Route path="/dashboard" element={<Dashboard
                     card={card}
                    />}></Route>
-                  <Route path="/transactions" element={<Transactions />}></Route>
+                  <Route path="/transactions" element={<Transactions card={card}/>}></Route>
                   <Route path="/cards" element={<UserCards card={card}/>}></Route>
                   <Route path="/addcard" element={<CardForm />}></Route>
                   <Route path="/addtransaction" element={<TranasctionsForm />}></Route>
