@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-    ExpensesList, ExpensesDetail, CardList, CardDetail,
+    ExpensesList, ExpensesDetail, CardList, CardDetail, get_income_for_this_month,
     get_all_spendings_for_card, get_recent_spendings,
     get_expenses_for_month, get_highest_recurring_expense,
     sum_of_all_cards_for_member, get_all_income_for_card, expense_categories, delete_card,
@@ -29,4 +29,6 @@ urlpatterns = [
     
     path('cards/sum-of-all/', sum_of_all_cards_for_member),
 
+
+    path('cards/<int:card>/get-all-income/', get_income_for_this_month)
 ]

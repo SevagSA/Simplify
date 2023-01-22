@@ -31,7 +31,7 @@ class Expenses(models.Model):
     date_of_expense = models.DateField()
     # i.e income vs spending, if its spending, * -1 to do calculations
     is_income = models.BooleanField(default=False)
-    category = models.CharField(max_length=13, choices=settings.EXPENSES_CATEGORY)
+    category = models.CharField(max_length=13, choices=settings.EXPENSES_CATEGORY, blank=True, null=True)
     alternative_amount = models.DecimalField(default= 0, max_digits=8, decimal_places=2)
     alternative_name = models.CharField(max_length=20, unique=True, null= True, blank=True)
 
