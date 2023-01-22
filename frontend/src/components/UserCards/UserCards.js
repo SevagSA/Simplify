@@ -1,20 +1,21 @@
 // import { Component } from "react";
-import "./Accounts.css";
+import "./UserCards.css";
 
 // Child-Components
 import DashboardCard from "../DashboardCard/DashboardCard";
 import { ScheduledPayments } from "../ScheduledPayments/ScheduledPayments";
-import { AddCards } from "../AddCards/AddCards";
+import { EditCard, AddCard } from "../AddCards/AddCards";
 
-export default function Accounts(){
+export default function UserCards(){
     return(
         <div>
-            <h1>Accounts</h1>
+            <h1>Cards</h1>
             <div>
                 <DashboardCard />
+                <AddCard />
             </div>
             <div>
-                <AddCards />
+                <EditCard />
             </div>
             <div>
                 <ScheduledPayments />

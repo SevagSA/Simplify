@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Button,
     Form,
@@ -8,7 +9,13 @@ import {
   } from 'reactstrap';
 import './AddCards.css';
 
-function AddCards(props){
+function AddCard(props){
+    return (
+        <Link to="/addcard">Add Card</Link>
+    );
+}
+
+function EditCard(props){
     return (
         <Form className="form">
             <FormGroup>
@@ -22,13 +29,10 @@ function AddCards(props){
                     <option>Saving</option>
                 </Input>
             </FormGroup>
-            <FormGroup>
-                <Label for="cardNum">Card Number</Label>
-                <Input id="cardNum" minLength="19" maxLength="19" required placeholder='XXXX XXXX XXXX XXXX'/>
-            </FormGroup>
-        <Button>Add Card</Button>
+            <Button>Edit Card</Button>
+            <Button>Delete Card</Button>
         </Form>
     );
 }
 
-export {AddCards}
+export {AddCard, EditCard}
