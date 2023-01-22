@@ -14,7 +14,7 @@ function TransactionsForm(props){
             <Form className="form">
                 <FormGroup>
                     <Label for="sourceVal">Transaction Source</Label>
-                    <Input id="sourceVal" type="text" placeholder='SOURCE' required/>
+                    <Input id="sourceVal" type="text" placeholder='Source' required/>
                 </FormGroup>
                 <FormGroup>
                     <Label for="accType">Category</Label>
