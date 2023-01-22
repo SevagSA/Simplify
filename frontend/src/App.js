@@ -15,8 +15,6 @@ import UserCards from './components/UserCards/UserCards';
 import CardForm from './components/CardForm/CardForm';
 import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
-var test = null;
-
 function App(){
   const [card, setCard] = useState(null);
 
