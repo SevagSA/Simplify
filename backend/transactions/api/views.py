@@ -86,9 +86,11 @@ def open_ai_view(request, source):
 
     alternatives = []
     if expense.category == settings.FOOD:
-        prompt = f"Generate a list of cheap {source} prices, in JSON format with only name and price fields, and 3 entries"
+        prompt = f"Generate a list of different company {source} prices different than {source}, in JSON format with only name and price fields, and 3 entries"
         alternatives = alternative_source_generator(prompt)
-        
+    elif expense.category == settings.ENTERTAINMENT:
+        prompt = f"Generate a list of different company {source} subscriptions than {source}, in JSON format with only name and price fields, and 3 entries"
+        alternatives = alternative_source_generator(prompt)
     return Response(json.loads(alternatives))
 
 
@@ -98,5 +100,5 @@ def alternative_source_generator(prompt):
         model="text-davinci-003",
         prompt=prompt,
         max_tokens=1000,
-        temperature= 0.3)
+        temperature= 0.9)
     return response["choices"][0]["text"]
