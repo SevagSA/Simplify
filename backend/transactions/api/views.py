@@ -1,4 +1,5 @@
 import json
+import re
 import openai
 from django.db.models import Sum
 from transactions.models import Expenses, Card
@@ -88,6 +89,14 @@ def open_ai_view(request, source):
     if expense.category == settings.FOOD:
         prompt = f"Generate a list of different company {source} prices different than {source}, in JSON format with only name and price fields, and 3 entries"
         alternatives = alternative_source_generator(prompt)
+        alternatives_json = json.loads(alternatives)
+        cheapest_alternative = sorted(alternatives_json, key=lambda d: d['price'])[0]
+        cheapest_name = cheapest_alternative['name']
+        cheapest_string = cheapest_alternative['price']
+        cheapest_value = re.findall("\d+\.\d+",cheapest_string)[0]
+        expense.alternative_amount = cheapest_value
+        expense.alternative_name = cheapest_name
+        expense.save()
     elif expense.category == settings.ENTERTAINMENT:
         prompt = f"Generate a list of different company {source} subscriptions than {source}, in JSON format with only name and price fields, and 3 entries"
         alternatives = alternative_source_generator(prompt)
