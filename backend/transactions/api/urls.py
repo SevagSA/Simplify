@@ -3,7 +3,7 @@ from .views import (
     ExpensesList, ExpensesDetail, CardList, CardDetail,
     get_all_spendings_for_card, get_recent_spendings,
     get_expenses_for_month, get_highest_recurring_expense,
-    sum_of_all_cards_for_member, get_all_income_for_card, expense_categories,
+    sum_of_all_cards_for_member, get_all_income_for_card, expense_categories, delete_card,
     compare_last_months_spending_for_card, compare_last_months_income_for_card)
 
 urlpatterns = [
@@ -20,6 +20,7 @@ urlpatterns = [
 
     path('cards/', CardList.as_view()),
     path('cards/<int:pk>/', CardDetail.as_view()),
+    path('cards/delete/', delete_card),
     
     path('cards/<int:pk>/last-month-spendings/', compare_last_months_spending_for_card),
     path('cards/<int:pk>/last-month-income/', compare_last_months_income_for_card),

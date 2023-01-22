@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from member.models import Member
 from django.conf import settings
 
+
 @api_view(['POST'])
 def login_member(request):
     email = request.data.get('email')
