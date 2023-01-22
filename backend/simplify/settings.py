@@ -137,18 +137,16 @@ CARD_TYPES = (
 ONCE = "One-time"
 DAILY = "Daily"
 WEEKLY = "Weekly"
-BIWEEKLY = "Bi-Weekly"
 MONTHLY = "Monthly"
 YEARLY = "Yearly"
 
 FREQUENCY_TYPES_LIST = [
-    ONCE, DAILY, WEEKLY, BIWEEKLY, MONTHLY, YEARLY
+    ONCE, DAILY, WEEKLY, MONTHLY, YEARLY
 ]
 
 FREQUENCY_TYPES = (
     (ONCE, "One-time"),
     (DAILY, "Daily"),
-    (BIWEEKLY, "Bi-Weekly"),
     (WEEKLY, "Weekly"),
     (MONTHLY, "Monthly"),
     (YEARLY, "Yearly"),

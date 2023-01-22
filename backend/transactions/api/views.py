@@ -146,13 +146,10 @@ def get_income_for_this_month(request, card):
     today = date.today()
     income = Expenses.objects.filter(card=card).filter(is_income=True).filter(
         date_of_expense__month=today.month).order_by(
-            "date_of_expense__day").values_list("amount", "date_of_expense")
-    print(income[0])
-    income_list = []
+            "date_of_expense__day").values_list("date_of_expense", "amount")
+    income_dict = {}
     for inc in income:
-        print(inc)
-        income_list.append({inc.get('date_of_expense').day: str(inc.get('amount'))})
-    print(income_list)
-    # serializer = ExpensesSerializer(income, many=True)
-    return Response(json.dumps(income_list))
+        print(inc[0], inc[1])
+        income_dict[inc[0].day] = str(inc[1])
+    return Response(json.dumps(income_dict))
     
