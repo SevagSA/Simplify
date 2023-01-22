@@ -1,24 +1,21 @@
 import './App.css';
 import Sidebar from './components/Sidebar/SidebarComponent';
-import DashboardCard from './components/DashboardCard/DashboardCard';
-import ExpensesCard from './components/ExpensesCard/ExpensesCard';
-import MonthlyPayments from './components/MonthlyPayments/MonthlyPayments';
-import {LatestSpendings} from './components/LatestSpendings/LatestSpendings'
-import DataGraph from './components/DataGraph/DataGraph';
-import { ScheduledPayments } from './components/ScheduledPayments/ScheduledPayments';
-import PersonalGoal from './components/PersonalGoal/PersonalGoal';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App(){
   return (
-    <div className="App">
+    <div className="App background-color-class">
       {/* <header className="App-header">
         
       </header> */}
-      <div>
-        <Sidebar />
-      </div>
-      <div>
-        
+      <div className='top-banner full-width1234'></div>
+      <div className='menu-items123 full-width123'>
+        <div className='small-width123'>
+          <Sidebar />
+        </div>
+        <div className='big-width123'>
+          <Dashboard />
+        </div>
       </div>
     </div>
   );

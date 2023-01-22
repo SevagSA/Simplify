@@ -1,3 +1,46 @@
 .background-color-class {
-    background-color: black !important;
+    background-color: #FAFAFA !important;
+    overflow: hidden !important;
+}
+
+.menu-items123 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+
+.full-width123 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-width1234 {
+    width: 100vw;
+    height: 12vh;
+}
+
+.small-width123 {
+    float:left; 
+    display:inline; 
+    width: 20vw;
+    height: 100vh;
+}
+
+.big-width123 {
+    float:left; 
+    display:inline; 
+    width: 80vw;
+    height: 88vh;
+    margin-top: 12vh;
+}
+
+.top-banner {
+    position: relative;
+    background-image: url('../images/top-banner-cropped.jpeg');
+    background-size: cover;
+    background-position: 0vh;
+    background-position-y: -25vh;
+    overflow: hidden !important;
 }
