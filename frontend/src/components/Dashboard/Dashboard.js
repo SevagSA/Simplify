@@ -18,11 +18,11 @@ export default function Dashboard(){
                 <div className='width-40'>
                     <DashboardCard />
                     <PersonalGoal />
-                    <ExpensesCard />
                     <LatestSpendings />
                 </div>
                 <div className='width-40'>
                     <DataGraph />
+                    <ExpensesCard />
                     <ScheduledPayments />
                 </div>
             </div>

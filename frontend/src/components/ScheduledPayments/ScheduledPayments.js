@@ -23,7 +23,7 @@ class ScheduledPayments extends Component{
 
     render(){
         return(
-            <div>
+            <div className="margin-top-specific4">
                 <h1 className="sub-title">Scheduled payments</h1>
                 <div className="d-flex p-2 flex-row">
                     {this.renderPayments()}

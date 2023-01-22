@@ -8,7 +8,7 @@ import {
 export default class ExpensesCard extends Component{
     render(){
         return (
-            <div className='full-width123456'>
+            <div className='full-width123456  margin-top-specific3'>
                 <div className='half-card-left'>
                     <div className="half-left">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" color="red" fill="currentColor" class="bi bi-chevron-up up-arrow-sizing" viewBox="0 0 16 16">

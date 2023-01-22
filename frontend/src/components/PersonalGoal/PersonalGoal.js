@@ -11,7 +11,7 @@ export default class PersonalGoal extends Component{
 
     render(){
         return (
-            <div>
+            <div className="margin-top-specific"  >
                 <div className='full-width123456 something123'>
                     <div className='small-width123456 something123'>
                         <h2 className="something123">Personal Goal</h2>
