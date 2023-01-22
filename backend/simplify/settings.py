@@ -148,6 +148,7 @@ FREQUENCY_TYPES_LIST = [
 FREQUENCY_TYPES = (
     (ONCE, "One-time"),
     (DAILY, "Daily"),
+    (BIWEEKLY, "Bi-Weekly"),
     (WEEKLY, "Weekly"),
     (MONTHLY, "Monthly"),
     (YEARLY, "Yearly"),
@@ -179,6 +180,7 @@ MISCELLANEOUS = "Miscellaneous"
 EXPENSES_CATEGORY_LIST = [FOOD, HOUSING, ENTERTAINMENT, MISCELLANEOUS]
 
 EXPENSES_CATEGORY = (
+    ('', '----'),
     (FOOD, "Food"),
     (HOUSING, "Housing"),
     (ENTERTAINMENT, "Entertainment"),

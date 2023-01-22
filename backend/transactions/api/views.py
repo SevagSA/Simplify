@@ -139,3 +139,20 @@ def compare_last_months_income_for_card(request, pk):
         current_month_income_total = '{:0.2f}'.format(current_month_income['amount__sum'])
 
     return Response({"last month": last_month_income_total, "current month": current_month_income_total})
+
+
+@api_view(['GET'])
+def get_income_for_this_month(request, card):
+    today = date.today()
+    income = Expenses.objects.filter(card=card).filter(is_income=True).filter(
+        date_of_expense__month=today.month).order_by(
+            "date_of_expense__day").values_list("amount", "date_of_expense")
+    print(income[0])
+    income_list = []
+    for inc in income:
+        print(inc)
+        income_list.append({inc.get('date_of_expense').day: str(inc.get('amount'))})
+    print(income_list)
+    # serializer = ExpensesSerializer(income, many=True)
+    return Response(json.dumps(income_list))
+    
