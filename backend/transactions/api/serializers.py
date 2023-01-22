@@ -7,7 +7,7 @@ class CardSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Card
-        exclude = ('member', )
+        fields = "__all__"
     
 class ExpensesSerializer(serializers.ModelSerializer):
 
