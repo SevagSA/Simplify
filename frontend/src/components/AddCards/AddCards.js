@@ -28,6 +28,7 @@ function editCard(e){
             }),
             headers: {
                 "Content-Type": "application/json",
+                'X-CSRFToken':'habibi',
             },
         }
     )
@@ -50,10 +51,11 @@ function deleteCard(card){
 }
 
 function EditCard({card}){
+    {console.log(card)}
     return (
         <div>
             <Form onSubmit={editCard} className="form">
-                <FormGroup>
+            <FormGroup>
                     <Label for="availBal">Available balance</Label>
                     <Input id="availBal" name="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
                     <Input name="cardId" value={card.id} hidden/>
@@ -69,10 +71,6 @@ function EditCard({card}){
                     <Button name='editCard' className='somethingcooler'>Edit Card</Button>
                 </div>  
             </Form>
-            <div>
-                <Button name='deleteCard' onClick={deleteCard(card)} className='somethingcooler'>Delete Card</Button>
-            </div>
-            
         </div>
         
     );

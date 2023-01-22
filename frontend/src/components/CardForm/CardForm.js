@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import './CardForm.css'
 import {
     Button,
@@ -8,24 +9,25 @@ import {
   } from 'reactstrap';
 
 
-function createCard(e){
+function CreateCard(e){
     e.preventDefault();
-
     fetch(`/transactions/cards/`, {
             method: 'POST',
             body: JSON.stringify({
                 card_balance:e.target.availBal.value,
                 card_type:e.target.accType.value,
-                card_numper:e.target.cardNum.value,
+                card_number:e.target.cardNum.value,
+                member:1
             }),
             headers: {
                 "Content-Type": "application/json",
-                // Add CSRF token
+                'X-CSRFToken':'habibi',
             },
         }
     )
     .then(response => response.json())
-    .then(json =>console.log(json));
+    .then(json => console.log(json));
+    window.location.reload(true);
 }
 
 function CardForm(card){
@@ -35,11 +37,12 @@ function CardForm(card){
                 <h1 className="title">Add card</h1>
             </div>
             <div className='losingtheplot'>
-                <Form onSubmit={createCard} className="form">
+                <Form onSubmit={CreateCard} className="form">
                     <FormGroup>
                         <Label for="availBal">Available balance</Label>
                         <Input id="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
                         <Input name="cardId" value={card.id} hidden/>
+                        <Input name="memberId" value={card.member} hidden/>
                     </FormGroup>
                     <FormGroup>
                         <Label for="accType">Account type</Label>
