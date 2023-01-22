@@ -44,7 +44,7 @@ class TransactionSummary extends Component{
                             <th>Date</th>
                             <th>Amount</th>
                             <th>Account</th>
-                            <th>Operations</th>
+                            {/* <th>Operations</th> */}
                         </tr>      
                     </thead>
                     <tbody>
@@ -57,7 +57,6 @@ class TransactionSummary extends Component{
 }
 
 function Transaction(props){
-    {console.log("TRANSACTION")}
     return(
         <tr>
             <td>{props.value['source']}</td>
@@ -65,7 +64,7 @@ function Transaction(props){
             <td>{props.value['date_of_expense']}</td>
             <td>{props.value['amount']}</td>
             <td>{props.value['card']}</td>
-            <td><Button className='somethingcooler7' variant="dark">Delete</Button></td>
+            {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
         </tr>
     )
 }
