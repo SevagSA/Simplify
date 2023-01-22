@@ -7,7 +7,6 @@ function getCards(){
 async function publish(eventName, data) {
     if (data == null){
         const cards = await getCards();
-        console.log(cards);
         data = cards[0];
     }
     const event = new CustomEvent(eventName, { detail: data });

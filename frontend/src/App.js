@@ -16,12 +16,11 @@ import CardForm from './components/CardForm/CardForm';
 import TranasctionsForm from './components/TransactionsForm/TransactionsForm';
 
 function App(){
-  var card = null;
+  const [card, setCard] = useState({});
 
   useEffect(() => {
     document.addEventListener('cardChanged', function({ detail }) {
-      console.log("DETAIL", detail);
-      card = detail;
+      setCard(detail);
     }, [])
   })
 
@@ -34,6 +33,7 @@ function App(){
             <Sidebar />
           </div>
           <div className='big-width123'>
+              {/* {console.log('SEVAG', card)} */}
               <Routes>
                   <Route path="/" element={null}></Route>
                   <Route path="/dashboard" element={<Dashboard
