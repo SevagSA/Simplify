@@ -65,7 +65,7 @@ export default class Sidebar extends Component{
                     <h2><Link to="/dashboard" style={{ textDecoration: 'none' }} className="sidemenu-links">Dashboard</Link></h2>
                   </div>
                   <div className="full-width small-margin-top">
-                    <h2><Link to="/investements" style={{ textDecoration: 'none' }} className="sidemenu-links">Wallet</Link></h2>
+                    <h2><Link to="/wallet" style={{ textDecoration: 'none' }} className="sidemenu-links">Wallet</Link></h2>
                   </div>
                   <div className="full-width small-margin-top">
                     <h2><Link to="/transactions" style={{ textDecoration: 'none' }} className="sidemenu-links">Transactions</Link></h2>
