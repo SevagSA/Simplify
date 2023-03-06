@@ -66,11 +66,11 @@ DEBUG=True
 OPEN_AI_API_KEY=your_own_open_ai_api_key
 
 To properly run the application, you will need to navigate to 'https://platform.openai.com/account/api-keys' and login or create yourself an account. Then, you will simply have to click the 'Create new secret key' button and copy the value generated. Go back into the '.env' file you created and replace the 'your_own_open_ai_api_key' with the value that you just generated. Once you are done entering these lines in the file and saved your changes, enter those next commands in the Terminal:
-7. ./manage.py migrate
-8. ./manage.py runserver
+1. ./manage.py migrate
+2. ./manage.py runserver
 
 Finally, open a second Terminal window and navigate back to where your Simplify folder is located on your machine using 'cd' and run those commands:
-9. cd frontend
-10. npm start
+1. cd frontend
+2. npm start
 
 You are done! Everything should now be working properly. You can now go into a web browser and enter 'http://localhost:3000/dashboard' to see the website. Keep in mind that everytime you will want to see/use the website after closing your machine, you will have to enter the './manage.py runserver' command inside of the 'backend' folder and the 'npm start' command inside of the 'frontend' folder in order to do so. 
