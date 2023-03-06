@@ -38,7 +38,7 @@
 
 .top-banner {
     position: relative;
-    background-image: url('../images/banner2-cropped.jpg');
+    background-image: url('./images/banner2-cropped.jpg');
     background-size: cover;
     background-position: 0vh;
     background-position-y: -25vh;

@@ -84,17 +84,17 @@
 }
 
 .category-food {
-    background-image: url("../../../images/food-icon.svg") !important;
+    background-image: url("../../images/food-icon.svg") !important;
     background-size: contain;
 }
 
 .category-housing {
-    background-image: url("../../../images/housing-icon.svg") !important;
+    background-image: url("../../images/housing-icon.svg") !important;
     background-size: contain;
 }
 
 .category-entertainment {
-    background-image: url("../../../images/entertainment-icon.svg") !important;
+    background-image: url("../../images/entertainment-icon.svg") !important;
     background-size: contain;
 }
 
@@ -103,6 +103,6 @@
 }
 
 .category-miscellaneous {
-    background-image: url("../../../images/miscellaneous-icon.svg") !important;
+    background-image: url("../../images/miscellaneous-icon.svg") !important;
     background-size: contain;
 }
