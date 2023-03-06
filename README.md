@@ -62,7 +62,9 @@ In order to run this application locally on your machine you will need to open a
 After entering these commands you will need to create a file called '.env' in the simplify folder inside of the backend folder. Then, enter those lines in the newly created file:
 
 SK=somerandomstringthatdoesnotmatter
+<br>
 DEBUG=True
+<br>
 OPEN_AI_API_KEY=your_own_open_ai_api_key
 
 To properly run the application, you will need to navigate to 'https://platform.openai.com/account/api-keys' and login or create yourself an account. Then, you will simply have to click the 'Create new secret key' button and copy the value generated. Go back into the '.env' file you created and replace the 'your_own_open_ai_api_key' with the value that you just generated. Once you are done entering these lines in the file and saved your changes, enter those next commands in the Terminal:
