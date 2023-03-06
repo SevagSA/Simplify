@@ -2,6 +2,7 @@
     height: 96vh;
     width: 18vw;
     margin: 2vh 1vw 2vh 1vw;
+    padding: 5vh 0vw 0vh 0vw;
     background-color: var(--custom-white);
     color: var(--custom-black);
 }
@@ -10,4 +11,13 @@
     height: 10vw;
     width: 10vw;
     clip-path: circle();
+}
+
+
+
+
+.monthly-budget {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
