@@ -46,3 +46,31 @@ We will continue the development of $implify on our own time in the future as we
 ## Built With
 
 Python: Django, Django Rest Framework. JavaScript: React.js. Figma, GitHub, OpenAi, SQLite, Trello
+
+
+
+## Running Locally
+
+In order to run this application locally on your machine you will need to open a command prompt or a terminal window inside of your IDE of choice and navigate to the location of the Simplify project using 'cd'. Then, enter these following commands in order:
+1. cd frontend
+2. npm i --force
+3. cd ../backend
+4. python3 -m venv ./env
+5. source env/bin/activate
+6. pip install -r requirements.txt
+
+After entering these commands you will need to create a file called '.env' in the simplify folder inside of the backend folder. Then, enter those lines in the newly created file:
+
+SK=somerandomstringthatdoesnotmatter
+DEBUG=True
+OPEN_AI_API_KEY=your_own_open_ai_api_key
+
+To properly run the application, you will need to navigate to 'https://platform.openai.com/account/api-keys' and login or create yourself an account. Then, you will simply have to click the 'Create new secret key' button and copy the value generated. Go back into the '.env' file you created and replace the 'your_own_open_ai_api_key' with the value that you just generated. Once you are done entering these lines in the file and saved your changes, enter those next commands in the Terminal:
+7. ./manage.py migrate
+8. ./manage.py runserver
+
+Finally, open a second Terminal window and navigate back to where your Simplify folder is located on your machine using 'cd' and run those commands:
+9. cd frontend
+10. npm start
+
+You are done! Everything should now be working properly. You can now go into a web browser and enter 'http://localhost:3000/dashboard' to see the website. Keep in mind that everytime you will want to see/use the website after closing your machine, you will have to enter the './manage.py runserver' command inside of the 'backend' folder and the 'npm start' command inside of the 'frontend' folder in order to do so. 
