@@ -54,7 +54,23 @@ function EditCard({card}){
     {console.log(card)}
     return (
         <div>
-            
+            <Form onSubmit={editCard} className="form">
+            <FormGroup>
+                    <Label for="availBal">Available balance</Label>
+                    <Input id="availBal" name="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
+                    <Input name="cardId" value={card.id} hidden/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="accType">Account type</Label>
+                    <Input type="select" name="accType" id="accType" required>
+                        <option>Debit</option>
+                        <option>Credit</option>
+                    </Input>
+                </FormGroup>
+                <div className='marginsomethingcool'>
+                    <Button name='editCard' className='somethingcooler'>Edit Card</Button>
+                </div>  
+            </Form>
         </div>
         
     );

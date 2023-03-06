@@ -17,19 +17,7 @@ import { EditCard, AddCard } from "../AddCards/AddCards";
 export default function UserCards({card}){
     return(
         <div>
-            <div className="page-title">
-                <h1 className="title">Cards</h1>
-            </div>
-            <div className="special-width">
-                <div className="add-button-style sizebutton">
-                    <div className="reposition">
-                        <AddCard card={card}/>
-                    </div>
-                </div>
-                    <DashboardCard />
-                <div className="asdgsd"></div>
-                <EditCard card={card}/>
-            </div>
+            
         </div>
     );
 }

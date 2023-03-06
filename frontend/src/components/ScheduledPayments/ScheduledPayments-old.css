@@ -1,0 +1,31 @@
+.scheduledCard {
+    width: 8vw !important;
+    height: 8vw !important;
+    background-color: #F14747;
+    margin: 0vw 0.625vw 0vw 0.625vw;
+    border-radius: 1vh;
+}
+
+.icon-picture2 {
+    height: 2vw;
+    width: 2vw;
+    margin-top: 3.5vh;
+    border-radius: 1vh;
+    background-image: url("../../images/user-picture.jpg");
+}
+
+.title-card1234789 {
+    color: #EBEBEB;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    margin-top: 1vh;
+}
+
+.margin-top-custom {
+    color: #EBEBEB;
+    padding-top: 0.5vh !important;
+}
+
+.margin-left3 {
+    padding-left: 0.5vw;
+}

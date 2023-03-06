@@ -36,7 +36,11 @@ class ScheduledPayments extends Component{
 function Payment(props){
     return (
     <div>
-        
+        <div className="scheduledCard margin-left3">
+            <h1 className="title-card123 margin-top-custom">$11.99/m</h1>
+            <div className="user-picture icon-picture2"></div>
+            <h1 className="title-card1234789">Ps5 Game</h1>
+        </div>
     </div>
     );
 }

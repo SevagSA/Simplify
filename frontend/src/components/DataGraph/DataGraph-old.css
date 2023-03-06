@@ -1,0 +1,25 @@
+.sub-title {
+    color: black;
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+.title-card1234567 {
+    margin-right: 2vw !important;
+    background-color: white;
+    border: none;
+    text-align: right;
+    color: #696262;
+}
+
+.account-card2 {
+    height: 32vh !important;
+}
+
+.container-graph {
+    width: 27vw !important;
+    text-align: left !important;
+    /* background-color: black; */
+    margin-top: 3vh;
+    height: 25.25vh;
+}

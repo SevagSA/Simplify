@@ -45,46 +45,8 @@ export default class DataGraph extends Component {
 
   render() {
     return (
-      <div className="account-card account-card2">
-        <div className="full-width123456">
-          <div className="small-width123456">
-            <h1 className="sub-title">Balance analytics</h1>
-          </div>
-        </div>
-
-        <div className="container-graph">
-          <XYPlot width={400} height={240}>
-            <HorizontalGridLines />
-            <LineSeries
-              data={[
-                { x: 1, y: 300 },
-                { x: 2, y: 590 },
-                { x: 3, y: 200 },
-                { x: 4, y: 300 },
-                { x: 5, y: 700 },
-                { x: 6, y: 500 },
-                { x: 7, y: 600 },
-                { x: 8, y: 700 },
-              ]}
-            />
-
-            <LineSeries
-              data={[
-                { x: 1, y: 200 },
-                { x: 2, y: 300 },
-                { x: 3, y: 800 },
-                { x: 4, y: 700 },
-                { x: 5, y: 975 },
-                { x: 6, y: 590 },
-                { x: 7, y: 1000 },
-                { x: 8, y: 800 },
-              ]}
-            />
-
-            <XAxis />
-            <YAxis />
-          </XYPlot>
-        </div>
+      <div>
+        
       </div>
     );
   }

@@ -60,9 +60,17 @@ class TransactionSummary extends Component{
 function Transaction(props){
     console.log(props);
     return(
-        <div>
-            
-        </div>
+        <tr>
+            <td>{props.value['source']}</td>
+            <td>{props.value['category']}</td>
+            <td>{props.value['date_of_expense']}</td>
+            <td>{props.value['amount']}</td>
+            <td>John Doe</td>
+            <td>{
+                ['RBC','TD','National Bank','BMO','Scotia'][Math.floor(Math.random() * 5)]
+            }</td>
+            {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
+        </tr>
     )
 }
 
