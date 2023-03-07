@@ -1,0 +1,6 @@
+progress[value] {
+    height: 1vh;
+    border-radius: 1vw;
+    background-color: var(--custom-light-grey);
+    border-color: var(--custom-light-white);
+}

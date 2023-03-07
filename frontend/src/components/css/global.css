@@ -2,8 +2,10 @@
 /* Variables */
 :root {
     --custom-white: white;
+    --custom-light-white: #FAFAFA;
     --custom-black: black;
     --custom-grey: grey;
+    --custom-light-grey: #D9D9D9;
 }
 
 
@@ -79,6 +81,10 @@
     left: 0;
 }
 
+.float-right {
+    float: right;
+}
+
 
 
 /* ------------------------------- */
@@ -93,6 +99,10 @@
 /* Width Classes */
 .width-half {
     width: 50%;
+}
+
+.width-full {
+    width:100%;
 }
 
 

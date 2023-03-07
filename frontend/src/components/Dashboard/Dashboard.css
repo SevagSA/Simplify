@@ -1,9 +1,10 @@
 .column-container {
     height: 88vh;
+    width: 70%;
+    margin: auto;
 }
 
 .page-title {
-    padding-left: 5.5vw;
     padding-top: 2vh;
     padding-bottom: 0.75vh;
     font-weight: normal !important;

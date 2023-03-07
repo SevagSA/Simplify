@@ -14,14 +14,14 @@
     width: 29vw !important;
 }
 
-progress[value] {
+/* progress[value] {
     -webkit-appearance: none;
     -webkit-progress-bar: black !important;
     height: 1vh !important;
     border-radius: 1vw;
     background-color: #D9D9D9;
     border-color: #FAFAFA;
-}
+} */
 
 .something123 {
     margin-bottom: 0vw !important;
