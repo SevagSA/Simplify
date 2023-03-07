@@ -1,5 +1,14 @@
-.background-color-class {
-    background-color: #FAFAFA !important;
+.top-banner {
+    position: relative;
+    width: 100vw;
+    height: 12vh;
+
+    animation: fadeInAnimationTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.background-color {
     overflow: hidden !important;
 }
 
@@ -34,13 +43,4 @@
     width: 80vw;
     height: 88vh;
     margin-top: 12vh;
-}
-
-.top-banner {
-    position: relative;
-    background-image: url('./images/banner2-cropped.jpg');
-    background-size: cover;
-    background-position: 0vh;
-    background-position-y: -25vh;
-    overflow: hidden !important;
 }

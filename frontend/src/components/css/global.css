@@ -106,6 +106,7 @@ h2{
 h3{
     color: #6D6D6D !important;
     font-size: 0.95vw !important;
+    font-weight: normal !important;
 }
 
 h6{
@@ -116,4 +117,22 @@ h6{
 p {
     color: #6D6D6D !important;
     font-size: 0.75vw !important;
+}
+
+
+
+/* ------------------------------- */
+/* Animations */
+@keyframes fadeInAnimationLeft {
+    from{
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+}
+
+@keyframes fadeInAnimationTop {
+    from{
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
 }
