@@ -13,7 +13,7 @@ export default class PersonalGoal extends Component{
     render(){
         return (
             <div>
-                <p>Personal goal <label className="float-right">$1000 / $2000</label></p>
+                <p className="mb-0">Personal goal <label className="float-right"><label className="text-black">$1000 /</label> $2000</label></p>
                 <progress className="width-full" value="32" max="100"/>
             </div>
         );

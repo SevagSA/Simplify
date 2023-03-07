@@ -41,7 +41,7 @@
 }
 
 .brdr {
-    border: 0.5px solid black;
+    border: 0.5px solid var(--custom-light-grey);
 }
 
 .centered-container {
@@ -138,6 +138,10 @@
     padding: 1vh 1vw 1vh 1vw;
 }
 
+.pb-0 {
+    padding-bottom: 0;
+}
+
 
 
 /* ------------------------------- */
@@ -160,6 +164,10 @@
 
 .mb-2 {
     margin-bottom: 1.5vw;
+}
+
+.mb-0 {
+    margin-bottom: 0;
 }
 
 .margin-auto {
