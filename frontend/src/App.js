@@ -27,13 +27,13 @@ function App(){
 
   return (
     <BrowserRouter>
-      <div cardChanged className="background-color">
+      <div cardChanged className="">
         <img className='box-shadow top-banner' src={bannerPicture}/>
-        <div className='menu-items123 full-width123'>
-          <div className='small-width123'>
+        <div className='flex-container'>
+          <div className='inline-left sidebar-container'>
             <Sidebar />
           </div>
-          <div className='big-width123'>
+          <div className='inline-left main-container'>
               <Routes>
                   <Route path="/" element={null}></Route>
                   <Route path="/dashboard" element={<Dashboard card={card}/>}></Route>

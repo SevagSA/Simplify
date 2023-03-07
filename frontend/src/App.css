@@ -8,39 +8,13 @@
     animation-iteration-count: 1;
 }
 
-.background-color {
-    overflow: hidden !important;
-}
-
-.menu-items123 {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
-
-.full-width123 {
-    width: 100vw;
+.sidebar-container {
+    width: 17vw;
     height: 100vh;
 }
 
-.full-width1234 {
-    width: 100vw;
-    height: 12vh;
-}
-
-.small-width123 {
-    float:left; 
-    display:inline; 
-    width: 20vw;
-    height: 100vh;
-}
-
-.big-width123 {
-    float:left; 
-    display:inline; 
-    width: 80vw;
+.main-container {
+    width: 83vw;
     height: 88vh;
     margin-top: 12vh;
 }
