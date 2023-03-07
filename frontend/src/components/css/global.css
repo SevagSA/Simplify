@@ -9,6 +9,18 @@
 
 
 /* ------------------------------- */
+/* Color Classes */
+.background-black {
+    background-color: black;
+}
+
+.background-red {
+    background-color: red;
+}
+
+
+
+/* ------------------------------- */
 /* Boilerplate Classes */
 .light-background {
     background-color: var(--custom-grey);
@@ -73,6 +85,14 @@
 /* Height Classes */
 .height-10 {
     height: 10vh;
+}
+
+
+
+/* ------------------------------- */
+/* Width Classes */
+.width-half {
+    width: 50%;
 }
 
 
