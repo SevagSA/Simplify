@@ -21,7 +21,7 @@ export default function Dashboard({card}){
                 <div className=" column-container">
                     {/* <DataGraph card={card}/> */}
                     <ExpensesCard />
-                    {/* <ScheduledPayments /> */}
+                    <ScheduledPayments />
                 </div>
             </div>
         </div>
