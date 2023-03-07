@@ -13,19 +13,19 @@
 /* ------------------------------- */
 /* Color Classes */
 .background-black {
-    background-color: black;
+    background-color: var(--custom-black);
 }
 
 .background-red {
     background-color: red;
 }
 
-
-
-/* ------------------------------- */
-/* Boilerplate Classes */
-.light-background {
+.background-light {
     background-color: var(--custom-grey);
+}
+
+.text-black {
+    color: var(--custom-black);
 }
 
 
@@ -40,6 +40,10 @@
     border-radius: 15px;
 }
 
+.brdr {
+    border: 0.5px solid black;
+}
+
 .centered-container {
     position: relative;
     text-align: center;
@@ -48,10 +52,6 @@
 .center-element {
     display: flex;
     align-items: center;
-}
-
-.align-left {
-    text-align: left;
 }
 
 .center-vertical {
@@ -85,12 +85,29 @@
     float: right;
 }
 
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.no-paddmarg {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
 
 
 /* ------------------------------- */
 /* Height Classes */
 .height-10 {
     height: 10vh;
+}
+
+.height-8 {
+    height: 8vh;
 }
 
 
@@ -117,6 +134,10 @@
     padding-left: 3.5vw;
 }
 
+.pe-1 {
+    padding: 1vh 1vw 1vh 1vw;
+}
+
 
 
 /* ------------------------------- */
@@ -139,6 +160,22 @@
 
 .mb-2 {
     margin-bottom: 1.5vw;
+}
+
+.margin-auto {
+    margin: auto !important;
+}
+
+
+
+/* ------------------------------- */
+/* Text Manipulation Tags */
+.bold-text {
+    font-weight: bold !important;
+}
+
+.text-s16 {
+    font-size: 1vw;
 }
 
 
@@ -189,4 +226,8 @@ p {
         transform: translate3d(0, -100%, 0);
         visibility: visible;
     }
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
 }

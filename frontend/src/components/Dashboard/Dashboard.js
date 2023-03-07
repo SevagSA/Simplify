@@ -1,4 +1,3 @@
-// import { Component } from "react";
 import "./Dashboard.css";
 import DashboardCard from '../../components/DashboardCard/DashboardCard';
 import ExpensesCard from '../../components/ExpensesCard/ExpensesCard';
