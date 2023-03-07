@@ -75,4 +75,4 @@ Finally, open a second Terminal window and navigate back to where your Simplify 
 1. cd frontend
 2. npm start
 
-You are done! Everything should now be working properly. You can now go into a web browser and enter 'http://localhost:3000/dashboard' to see the website. Keep in mind that everytime you will want to see/use the website after closing your machine, you will have to enter the './manage.py runserver' command inside of the 'backend' folder and the 'npm start' command inside of the 'frontend' folder in order to do so. 
+You are done! Everything should now be working properly. You can now go into a web browser and enter 'http://localhost:3000/dashboard' to see the website. Keep in mind that everytime you will want to see/use the website after closing your machine, you will have to enter the 'source env/bin/activate' command followed by the './manage.py runserver' command inside of the 'backend' folder and the 'npm start' command inside of the 'frontend' folder in order to do so.
