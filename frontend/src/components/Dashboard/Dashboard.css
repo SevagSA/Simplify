@@ -1,0 +1,24 @@
+.width-40 {
+    float:left; 
+    display:inline; 
+    width: 40vw;
+    height: 88vh;
+    padding: 0vh 5.5vw 1vh 5.5vw;
+}
+
+.full-width12345 {
+    width: 80vw;
+    height: 88vh;
+}
+
+.page-title {
+    padding-left: 5.5vw;
+    padding-top: 2vh;
+}
+
+.title {
+    color: black;
+    font-weight: normal !important;
+    font-size: 32px;
+    padding-bottom: 0.75vh;
+}

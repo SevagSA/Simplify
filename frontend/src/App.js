@@ -27,7 +27,7 @@ function App(){
 
   return (
     <BrowserRouter>
-      <div cardChanged className="">
+      <div>
         <img className='box-shadow top-banner' src={bannerPicture}/>
         <div className='flex-container'>
           <div className='inline-left sidebar-container'>
