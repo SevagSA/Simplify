@@ -15,7 +15,8 @@ export default function Dashboard({card}){
             <div>
                 <div className='inline-left width-half'>
                     <div className="column-container">
-                        {/* <DashboardCard /> */}
+                        <DashboardCard />
+                        <div style={{height:'6vh'}}></div>
                         <PersonalGoal />
                         {/* <LatestSpendings /> */}
                     </div>

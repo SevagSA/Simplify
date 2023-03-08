@@ -1,0 +1,28 @@
+.account-card {
+    height: 25vh;
+    padding: 3vh 1vw 3vh 1vw;
+}
+
+.card-balance {
+    font-weight: normal !important;
+    font-size: 3vw !important;
+}
+
+.carousel-indicators {
+    bottom: auto !important;
+    margin-top: 25vh !important;
+}
+
+div.carousel-indicators > button {
+    border-radius: 50% !important;
+    height: 1.2vh !important;
+    width: 1.2vh !important;
+}
+
+div.carousel-indicators > button.active {
+    background-color: var(--custom-blue) !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    display: none !important;
+}
