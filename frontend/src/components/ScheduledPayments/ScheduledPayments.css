@@ -1,0 +1,13 @@
+.carousel-payment {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.payment-card {
+    height: 13vh;
+    width: 13vh;
+    position: relative;
+    padding: 0.5vh 1.2vh 0.5vh 1.2vh;
+}

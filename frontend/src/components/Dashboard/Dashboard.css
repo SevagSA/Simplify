@@ -1,7 +1,12 @@
 .column-container {
-    height: 88vh;
+    height: 80vh;
     width: 70%;
     margin: auto;
+}
+
+.page-title-container {
+    width: 100%;
+    margin-left: 6vw;
 }
 
 .page-title {

@@ -9,19 +9,24 @@ import PersonalGoal from '../../components/PersonalGoal/PersonalGoal';
 export default function Dashboard({card}){
     return(
         <div>
-            <div className='inline-left width-half'>
-                <div className=" column-container">
-                    <h1 className="page-title">Dashboard</h1>
-                    {/* <DashboardCard /> */}
-                    <PersonalGoal />
-                    {/* <LatestSpendings /> */}
-                </div>
+            <div className="page-title-container">
+                <h1 className="page-title text-black">Dashboard</h1>
             </div>
-            <div className='inline-left width-half'>
-                <div className=" column-container">
-                    {/* <DataGraph card={card}/> */}
-                    <ExpensesCard />
-                    <ScheduledPayments />
+            <div>
+                <div className='inline-left width-half'>
+                    <div className="column-container">
+                        {/* <DashboardCard /> */}
+                        <PersonalGoal />
+                        {/* <LatestSpendings /> */}
+                    </div>
+                </div>
+                <div className='inline-left width-half'>
+                    <div className="column-container">
+                        {/* <DataGraph card={card}/> */}
+                        <ExpensesCard />
+                        <div style={{height:'6vh'}}></div>
+                        <ScheduledPayments />
+                    </div>
                 </div>
             </div>
         </div>

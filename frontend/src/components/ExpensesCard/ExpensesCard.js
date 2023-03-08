@@ -21,7 +21,6 @@ export default class ExpensesCard extends Component{
                     <div className="inline-left width-half">
                         <div className="center-vertical height-8">
                             <p className="no-paddmarg">Income <br/><label className="text-black bold-text text-s16">$ 1,000</label></p>
-                            
                         </div>
                     </div>
                 </div>
