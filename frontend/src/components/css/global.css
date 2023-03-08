@@ -169,8 +169,20 @@ hr.solid {
     padding-left: 3.5vw;
 }
 
+.pr-1 {
+    padding-right: 1vw;
+}
+
+.pl-1 {
+    padding-left: 1vw;
+}
+
 .pe-1 {
     padding: 1vh 1vw 1vh 1vw;
+}
+
+.pr-05 {
+    padding-right: 0.5vw;
 }
 
 .pb-0 {
