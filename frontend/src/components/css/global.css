@@ -246,7 +246,7 @@ hr.solid {
 }
 
 .subtitle-text {
-    color: var(--custom-black);
+    color: var(--custom-black) !important;
     font-weight: bold;
     font-size: 1.5vw;
 }

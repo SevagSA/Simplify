@@ -24,7 +24,8 @@ export default function Dashboard({card}){
                 </div>
                 <div className='inline-left width-half'>
                     <div className="column-container">
-                        {/* <DataGraph card={card}/> */}
+                        <DataGraph card={card}/>
+                        <div style={{height:'6vh'}}></div>
                         <ExpensesCard />
                         <div style={{height:'6vh'}}></div>
                         <ScheduledPayments />

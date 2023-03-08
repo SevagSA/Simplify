@@ -12,6 +12,7 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-virtualized-auto-sizer": "^1.0.7",
     "react-vis": "^1.11.12",
     "reactstrap": "^9.1.5",
     "web-vitals": "^2.1.4"
