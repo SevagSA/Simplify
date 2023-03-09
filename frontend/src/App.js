@@ -1,7 +1,7 @@
 import './App.css';
 import './components/css/global.css';
 import { useEffect, useState } from 'react';
-import bannerPicture from "./images/banner2-cropped.jpg";
+import bannerPicture from "./images/banner.jpg";
 
 //Routers
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
