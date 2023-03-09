@@ -32,9 +32,9 @@ export default function DashboardCard(){
                     <Carousel.Item key={i}>
                         <div className="account-card">
                             <p className="no-pm">Available balance<label className="float-right">Credit</label></p>
-                            <div style={{height:"3vh"}}></div>
+                            <div className="height-3"></div>
                             <h1 className="text-black no-pm card-balance">$ {card["card_balance"]}</h1>
-                            <div style={{height:"4vh"}}></div>
+                            <div className="height-4"></div>
                             <p className="text-black no-pm">{card["card_number"]}</p>
                         </div>
                         <div></div>

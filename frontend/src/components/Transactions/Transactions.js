@@ -2,7 +2,6 @@ import "../css/global.css";
 import "./Transactions.css";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import { TransactionSummary } from "../TransactionSummary/TransactionSummary";
-import { Tips } from "../Tips/Tips";
 
 
 export default function Transactions({card}){
@@ -13,7 +12,7 @@ export default function Transactions({card}){
             </div>
             <div className="height-20">
                 <div className="flex-center width-full">
-                    <div id="transactions-card" className="height-20" style={{width:"25vw"}}>
+                    <div id="transactions-card" className="height-20">
                         <DashboardCard />
                     </div>
                 </div>

@@ -18,23 +18,23 @@ export default function Dashboard({card}){
                 <div id="dashboard-column-left" className="inline-left width-half">
                     <div className="column-container">
                         <DashboardCard />
-                        <div style={{height:"6vh"}}></div>
+                        <div className="height-6"></div>
                         <PersonalGoal />
-                        <div style={{height:"6vh"}}></div>
+                        <div className="height-6"></div>
                         <LatestSpendings title="Latest Expenses"/>
                     </div>
                 </div>
-                <div id="dashboard-small-divider" style={{height:"6vh", display:"none"}}></div>
+                <div id="dashboard-small-divider" className="height-6 display-none"></div>
                 <div id="dashboard-column-right" className="inline-left width-half">
                     <div className="column-container">
                         <DataGraph card={card}/>
-                        <div style={{height:"6vh"}}></div>
+                        <div className="height-6"></div>
                         <ExpensesCard />
-                        <div style={{height:"6vh"}}></div>
+                        <div className="height-6"></div>
                         <ScheduledPayments />
                     </div>
                 </div>
-                <div id="dashboard-small-divider" style={{height:"6vh", display:"none"}}></div>
+                <div id="dashboard-small-divider" className="height-6 display-none"></div>
             </div>
         </div>
     );

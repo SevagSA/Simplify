@@ -12,17 +12,17 @@ export default function Wallet({card}){
             </div>
             <div className="mr-8 ml-8">
                 <DataGraph card={card}/>
-                <div style={{height:"2vh"}}></div>
+                <div className="height-2"></div>
                 <p>Note: Not all expenses have alternatives</p>
-                <div style={{height:"2vh"}}></div>
+                <div className="height-2"></div>
                 <div id="wallet-expenses-container">
                     <div id="wallet-expenses" className="spaced-container">
                         <LatestSpendings title="Current Expenses"/>
-                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                        <div id="dashboard-small-divider" className="height-6 display-none"></div>
                         <LatestSpendings title="Alternative Suggestions"/>
-                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                        <div id="dashboard-small-divider" className="height-6 display-none"></div>
                         <LatestSpendings title="Potential Savings"/>
-                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                        <div id="dashboard-small-divider" className="height-6 display-none"></div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,9 @@
+#card {
+    width: 25vw;
+}
+
 @media screen and (max-width: 900px) {
     #card {
-        width: 50vw !important;
+        width: 50vw;
     }
 }

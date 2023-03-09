@@ -1,3 +1,7 @@
+#transactions-card {
+    width: 25vw;
+}
+
 @media screen and (max-width: 900px) {
     #transactions-card {
         width: 50vw !important;

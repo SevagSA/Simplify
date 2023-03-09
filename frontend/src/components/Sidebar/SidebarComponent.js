@@ -12,18 +12,18 @@ export default class Sidebar extends Component{
         <h1>$implify</h1>
 
         <div>
-          <div style={{height:"6vh"}}></div>
+          <div className="height-6"></div>
 
           <img className="user-picture mb-3" src={userPicture}/>
           <h3>Welcome back,</h3>
           <h6>John Doe</h6>
 
-          <div style={{height:"6vh"}}></div>
+          <div className="height-6"></div>
 
           <h2>$9,000.00</h2>
           <h3>Monthly budget</h3>
 
-          <div style={{height:"6vh"}}></div>
+          <div className="height-6"></div>
 
 
           <div className="align-left">
@@ -53,7 +53,7 @@ export default class Sidebar extends Component{
           </div>
         </div>
 
-        <div style={{height:"10vh"}}></div>
+        <div className="height-10"></div>
 
         <div id="tip-of-the-day" className="box-shadow border-radius centered-container ml-2 mr-2">
           <h6 className="">Tip of the day</h6>
