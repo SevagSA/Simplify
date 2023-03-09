@@ -3,14 +3,3 @@
     width: 60%;
     margin: auto;
 }
-
-.page-title-container {
-    width: 75vw;
-    margin-left: 8vw;
-}
-
-.page-title {
-    padding-top: 2vh;
-    padding-bottom: 0.75vh;
-    font-weight: normal !important;
-}

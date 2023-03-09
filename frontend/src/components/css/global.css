@@ -133,6 +133,17 @@ hr.solid {
     margin-bottom: 2vh;
 }
 
+.page-title-container {
+    width: 75vw;
+    margin-left: 8vw;
+}
+
+.page-title {
+    padding-top: 2vh;
+    padding-bottom: 0.75vh;
+    font-weight: normal !important;
+}
+
 
 
 /* ------------------------------- */
@@ -201,6 +212,10 @@ hr.solid {
     margin-bottom: 3vh;
 }
 
+.mt-20 {
+    margin-top: 1.5vh !important;
+}
+
 .ml-2 {
     margin-left: 1.5vw;
 }
@@ -210,7 +225,7 @@ hr.solid {
 }
 
 .mb-2 {
-    margin-bottom: 1.5vw;
+    margin-bottom: 1.5vh;
 }
 
 .mb-05 {
