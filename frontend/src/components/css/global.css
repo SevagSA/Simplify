@@ -102,6 +102,11 @@
     left: 0;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
 .float-right {
     float: right;
 }
@@ -151,18 +156,18 @@ hr.solid {
     margin: auto;
 }
 
-.a-button {
-    color: var(--custom-white);
-    background-color: var(--custom-blue);
-    padding: 4px 10px 4px 10px;
-    text-decoration: none;
-    border-radius: 5px;
+.a-button, .primary-button {
+    color: var(--custom-white) !important;
+    background-color: var(--custom-blue) !important;
+    padding: 4px 10px 4px 10px !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
 }
 
-.a-button:hover {
-    color: var(--custom-white);
-    background-color: var(--custom-light-blue);
-    cursor: pointer;
+.a-button:hover, .primary-button:hover {
+    color: var(--custom-white) !important;
+    background-color: var(--custom-light-blue) !important;
+    cursor: pointer !important;
 }
 
 
@@ -233,6 +238,10 @@ hr.solid {
 
 /* ------------------------------- */
 /* Margin Classes */
+.mt-15 {
+    margin-top: 15vh;
+}
+
 .mt-10 {
     margin-top: 10vh;
 }

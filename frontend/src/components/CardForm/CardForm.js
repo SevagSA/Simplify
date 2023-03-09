@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import './CardForm.css'
 import {
     Button,
@@ -9,15 +8,13 @@ import {
   } from 'reactstrap';
 
 
-function CreateCard(e){
+  function editCard(e){
     e.preventDefault();
-    fetch(`/transactions/cards/`, {
-            method: 'POST',
+    fetch(`/transactions/cards/${e.target.cardId.value}/`, {
+            method: 'PATCH',
             body: JSON.stringify({
                 card_balance:e.target.availBal.value,
                 card_type:e.target.accType.value,
-                card_number:e.target.cardNum.value,
-                member:1
             }),
             headers: {
                 "Content-Type": "application/json",
@@ -26,14 +23,30 @@ function CreateCard(e){
         }
     )
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json =>console.log(json));
     window.location.reload(true);
 }
 
 function CardForm(card){
     return (
         <div>
-            
+            <Form onSubmit={editCard} className="form">
+            <FormGroup>
+                    <Label for="availBal">Available balance</Label>
+                    <Input id="availBal" name="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
+                    <Input name="cardId" value={card.id} hidden/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="accType">Account type</Label>
+                    <Input type="select" name="accType" id="accType" required>
+                        <option>Debit</option>
+                        <option>Credit</option>
+                    </Input>
+                </FormGroup>
+                <div className="flex-center width-full">
+                    <Button className="primary-button" name='editCard'>Edit Card</Button>
+                </div>  
+            </Form>
         </div>
     );
 }
