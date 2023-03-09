@@ -1,0 +1,16 @@
+@media screen and (max-width: 900px) {
+    #wallet-expenses-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #wallet-expenses {
+        display: block;
+        width: 250px;
+    }
+
+    #wallet-small-divider {
+        display: block !important;
+    }
+}

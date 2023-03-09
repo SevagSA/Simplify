@@ -15,10 +15,15 @@ export default function Wallet({card}){
                 <div style={{height:"2vh"}}></div>
                 <p>Note: Not all expenses have alternatives</p>
                 <div style={{height:"2vh"}}></div>
-                <div className="spaced-container">
-                    <LatestSpendings title="Current Expenses"/>
-                    <LatestSpendings title="Alternative Suggestions"/>
-                    <LatestSpendings title="Potential Savings"/>
+                <div id="wallet-expenses-container">
+                    <div id="wallet-expenses" className="spaced-container">
+                        <LatestSpendings title="Current Expenses"/>
+                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                        <LatestSpendings title="Alternative Suggestions"/>
+                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                        <LatestSpendings title="Potential Savings"/>
+                        <div id="wallet-small-divider" style={{height:"6vh", display:"none"}}></div>
+                    </div>
                 </div>
             </div>
         </div>
