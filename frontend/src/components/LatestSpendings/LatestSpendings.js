@@ -21,7 +21,7 @@ class LatestSpendings extends Component{
     render(){
         return (
         <div>
-            <p className="bold-text text-black spaced-container mb-0">Latest spendings<label className="float-right text-grey unbold-text">View All</label></p>
+            <p className="bold-text text-black spaced-container mb-0">{this.props.title}<label className="float-right text-grey unbold-text">View All</label></p>
             <hr class="solid"></hr>
             <div>
                 {this.renderExpenses()}

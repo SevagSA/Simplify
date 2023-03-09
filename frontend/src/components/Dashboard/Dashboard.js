@@ -19,7 +19,7 @@ export default function Dashboard({card}){
                         <div style={{height:'6vh'}}></div>
                         <PersonalGoal />
                         <div style={{height:'6vh'}}></div>
-                        <LatestSpendings />
+                        <LatestSpendings title="Latest Expenses"/>
                     </div>
                 </div>
                 <div className='inline-left width-half'>

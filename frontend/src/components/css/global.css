@@ -208,11 +208,19 @@ hr.solid {
     margin-top: 10vh;
 }
 
+.ml-8 {
+    margin-left: 8vw !important;
+}
+
+.mr-8 {
+    margin-right: 8vw !important;
+}
+
 .mb-3 {
     margin-bottom: 3vh;
 }
 
-.mt-20 {
+.mt-2 {
     margin-top: 1.5vh !important;
 }
 

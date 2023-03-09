@@ -10,16 +10,20 @@ import {Link} from 'react-router-dom';
 
 export default function Wallet({card}){
     return(
-        <div className="mr-2 ml-2">
+        <div>
             <div className="page-title-container">
                 <h1 className="page-title text-black">Wallet</h1>
             </div>
-            <DataGraph card={card}/>
-            <div style={{height:'6vh'}}></div>
-            <div className='spaced-container'>
-                <LatestSpendings/>
-                <LatestSpendings/>
-                <LatestSpendings/>
+            <div className="mr-8 ml-8">
+                <DataGraph card={card}/>
+                <div style={{height:'2vh'}}></div>
+                <p>Note: Not all expenses have alternatives</p>
+                <div style={{height:'2vh'}}></div>
+                <div className='spaced-container'>
+                    <LatestSpendings title="Current Expenses"/>
+                    <LatestSpendings title="Alternative Suggestions"/>
+                    <LatestSpendings title="Potential Savings"/>
+                </div>
             </div>
         </div>
     );
