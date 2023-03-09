@@ -1,0 +1,13 @@
+#add-card-form {
+    width: 25vw;
+}
+
+@media screen and (max-width: 900px) {
+    #add-card-container {
+        margin-top: 0 !important;
+    }
+
+    #add-card-form {
+        width: 75vw;
+    }
+}

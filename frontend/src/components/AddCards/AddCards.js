@@ -37,9 +37,9 @@ function AddCard({card}){
             <div className="page-title-container">
                 <h1 className="page-title text-black">Add Card</h1>
             </div>
-            <div className="mr-8 ml-8 mb-3 mt-15">
+            <div id="add-card-container" className="mr-8 ml-8 mb-3 mt-15">
                 <div className="flex-center width-full">
-                    <div className="height-20" style={{width:"25vw"}}>
+                    <div id="add-card-form" className="height-20">
                         <Form onSubmit={CreateCard} className="form">
                             <FormGroup>
                                 <Label for="availBal">Available balance</Label>
