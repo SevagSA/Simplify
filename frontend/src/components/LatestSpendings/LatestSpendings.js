@@ -33,7 +33,7 @@ class LatestSpendings extends Component{
 
 function Spendings(props){
     return (
-        <div className='spaced-container spending-container'>
+        <div className='spaced-container'>
             <div>
                 <div className="inline-left pr-1">
                     <div className="center-vertical height-8">
