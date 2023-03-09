@@ -15,7 +15,7 @@ export default function UserCards({card}){
                     <a className="float-right a-button" href="/addcard">Add Card</a>
                 </div>
                 <div className="flex-center width-full">
-                    <div className="height-20" style={{width:"25vw"}}>
+                    <div id="card" className="height-20" style={{width:"25vw"}}>
                         <DashboardCard />
                     </div>
                 </div>
