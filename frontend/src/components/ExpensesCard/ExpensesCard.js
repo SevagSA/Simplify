@@ -7,7 +7,7 @@ export default class ExpensesCard extends Component{
     render(){
         return (
             <div className="height-8">
-                <div className='inline-left border-radius brdr expense-card-left'>
+                <div className="inline-left border-radius brdr expense-card-left">
                     <div className="inline-left width-half">
                         <div className="center-vertical height-8">
                             <svg className="margin-auto rotate-180" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vw" fill="green" viewBox="0 0 16 16">
@@ -21,7 +21,7 @@ export default class ExpensesCard extends Component{
                         </div>
                     </div>
                 </div>
-                <div className='inline-left border-radius box-shadow expense-card-right'>
+                <div className="inline-left border-radius box-shadow expense-card-right">
                     <div className="inline-left width-half">
                         <div className="center-vertical height-8">
                             <svg className="margin-auto" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vw" fill="red" viewBox="0 0 16 16">

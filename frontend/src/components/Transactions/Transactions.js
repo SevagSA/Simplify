@@ -12,12 +12,12 @@ export default function Transactions({card}){
                 <h1 className="page-title text-black">Transactions</h1>
             </div>
             <div className="height-20">
-                <div className='inline-left width-half'>
+                <div className="inline-left width-half">
                     <div className="column-container">
                         <DashboardCard />
                     </div>
                 </div>
-                <div className='inline-left width-half'>
+                <div className="inline-left width-half">
                     <div className="column-container">
                         <Tips />
                     </div>

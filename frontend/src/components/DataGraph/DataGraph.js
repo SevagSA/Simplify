@@ -1,7 +1,7 @@
 import "../css/global.css";
 import "./DataGraph.css";
 import "../../../node_modules/react-vis/dist/style.css";
-import AutoSizer from 'react-virtualized-auto-sizer';
+import AutoSizer from "react-virtualized-auto-sizer";
 import { Component } from "react";
 import {
   XYPlot,
@@ -55,7 +55,7 @@ export default class DataGraph extends Component {
             <svg className="margin-auto rotate-180" xmlns="http://www.w3.org/2000/svg" width="1vw" height="1vw" fill="gray" viewBox="0 0 16 16"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>
           </label>
         </p>
-        <div style={{height:'30vh', width:'100%'}}>
+        <div style={{height:"30vh", width:"100%"}}>
           <AutoSizer>
           {({ width, height }) => (
             <XYPlot width={width} height={height}>

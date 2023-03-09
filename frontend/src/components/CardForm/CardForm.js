@@ -1,25 +1,25 @@
 import "../css/global.css";
-import './CardForm.css'
+import "./CardForm.css"
 import {
     Button,
     Form,
     FormGroup,
     Input,
     Label
-  } from 'reactstrap';
+  } from "reactstrap";
 
 
 function editCard(e){
     e.preventDefault();
     fetch(`/transactions/cards/${e.target.cardId.value}/`, {
-            method: 'PATCH',
+            method: "PATCH",
             body: JSON.stringify({
                 card_balance:e.target.availBal.value,
                 card_type:e.target.accType.value,
             }),
             headers: {
                 "Content-Type": "application/json",
-                'X-CSRFToken':'habibi',
+                "X-CSRFToken":"habibi",
             },
         }
     )
@@ -34,7 +34,7 @@ function CardForm(card){
             <Form onSubmit={editCard} className="form">
             <FormGroup>
                     <Label for="availBal">Available balance</Label>
-                    <Input id="availBal" name="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
+                    <Input id="availBal" name="availBal" type="number" min="1" step="any" placeholder="99.99" required/>
                     <Input name="cardId" value={card.id} hidden/>
                 </FormGroup>
                 <FormGroup>
@@ -45,7 +45,7 @@ function CardForm(card){
                     </Input>
                 </FormGroup>
                 <div className="flex-center width-full">
-                    <Button className="primary-button" name='editCard'>Edit Card</Button>
+                    <Button className="primary-button" name="editCard">Edit Card</Button>
                 </div>  
             </Form>
         </div>

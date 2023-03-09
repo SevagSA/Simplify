@@ -1,11 +1,11 @@
 import "../css/global.css";
 import "./Dashboard.css";
-import DashboardCard from '../../components/DashboardCard/DashboardCard';
-import ExpensesCard from '../../components/ExpensesCard/ExpensesCard';
-import DataGraph from '../../components/DataGraph/DataGraph';
-import PersonalGoal from '../../components/PersonalGoal/PersonalGoal';
-import { ScheduledPayments } from '../../components/ScheduledPayments/ScheduledPayments';
-import { LatestSpendings } from '../../components/LatestSpendings/LatestSpendings'
+import DashboardCard from "../../components/DashboardCard/DashboardCard";
+import ExpensesCard from "../../components/ExpensesCard/ExpensesCard";
+import DataGraph from "../../components/DataGraph/DataGraph";
+import PersonalGoal from "../../components/PersonalGoal/PersonalGoal";
+import { ScheduledPayments } from "../../components/ScheduledPayments/ScheduledPayments";
+import { LatestSpendings } from "../../components/LatestSpendings/LatestSpendings"
 
 
 export default function Dashboard({card}){
@@ -15,21 +15,21 @@ export default function Dashboard({card}){
                 <h1 className="page-title text-black">Dashboard</h1>
             </div>
             <div>
-                <div className='inline-left width-half'>
+                <div className="inline-left width-half">
                     <div className="column-container">
                         <DashboardCard />
-                        <div style={{height:'6vh'}}></div>
+                        <div style={{height:"6vh"}}></div>
                         <PersonalGoal />
-                        <div style={{height:'6vh'}}></div>
+                        <div style={{height:"6vh"}}></div>
                         <LatestSpendings title="Latest Expenses"/>
                     </div>
                 </div>
-                <div className='inline-left width-half'>
+                <div className="inline-left width-half">
                     <div className="column-container">
                         <DataGraph card={card}/>
-                        <div style={{height:'6vh'}}></div>
+                        <div style={{height:"6vh"}}></div>
                         <ExpensesCard />
-                        <div style={{height:'6vh'}}></div>
+                        <div style={{height:"6vh"}}></div>
                         <ScheduledPayments />
                     </div>
                 </div>

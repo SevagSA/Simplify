@@ -1,6 +1,6 @@
 import "../css/global.css";
-import './LatestSpendings.css';
-import { Component } from 'react';
+import "./LatestSpendings.css";
+import { Component } from "react";
 
 
 class LatestSpendings extends Component{
@@ -34,7 +34,7 @@ class LatestSpendings extends Component{
 
 function Spendings(props){
     return (
-        <div className='spaced-container'>
+        <div className="spaced-container">
             <div>
                 <div className="inline-left pr-1">
                     <div className="center-vertical height-8">
@@ -44,7 +44,7 @@ function Spendings(props){
                 <div className="inline-left">
                     <div className="center-vertical height-8">
                         <p className="no-paddmarg">
-                            <label className='text-black bold-text text-s16'>Super C</label>
+                            <label className="text-black bold-text text-s16">Super C</label>
                             <br/>June 3, 2022 at 8:12 PM
                         </p>
                     </div>
@@ -53,7 +53,7 @@ function Spendings(props){
             <div className="inline-left">
                 <div className="center-vertical height-8">
                     <p className="no-paddmarg text-s16">
-                        <label className='pr-05 text-black'>
+                        <label className="pr-05 text-black">
                             -$10.34
                         </label>
                         <svg className="margin-auto rotate-90" xmlns="http://www.w3.org/2000/svg" width="1vw" height="1vw" fill="gray" viewBox="0 0 16 16"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>

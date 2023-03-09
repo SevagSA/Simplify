@@ -1,18 +1,18 @@
 import "../css/global.css";
-import './AddCards.css';
+import "./AddCards.css";
 import {
     Button,
     Form,
     FormGroup,
     Input,
     Label
-  } from 'reactstrap';
+  } from "reactstrap";
 
   
 function CreateCard(e){
     e.preventDefault();
     fetch(`/transactions/cards/`, {
-            method: 'POST',
+            method: "POST",
             body: JSON.stringify({
                 card_balance:e.target.availBal.value,
                 card_type:e.target.accType.value,
@@ -21,7 +21,7 @@ function CreateCard(e){
             }),
             headers: {
                 "Content-Type": "application/json",
-                'X-CSRFToken':'habibi',
+                "X-CSRFToken":"habibi",
             },
         }
     )
@@ -39,11 +39,11 @@ function AddCard({card}){
             </div>
             <div className="mr-8 ml-8 mb-3 mt-15">
                 <div className="flex-center width-full">
-                    <div className="height-20" style={{width:'25vw'}}>
+                    <div className="height-20" style={{width:"25vw"}}>
                         <Form onSubmit={CreateCard} className="form">
                             <FormGroup>
                                 <Label for="availBal">Available balance</Label>
-                                <Input id="availBal" type="number" min="1" step="any" placeholder='99.99' required/>
+                                <Input id="availBal" type="number" min="1" step="any" placeholder="99.99" required/>
                                 <Input name="cardId" value={card.id} hidden/>
                                 <Input name="memberId" value={card.member} hidden/>
                             </FormGroup>
@@ -56,10 +56,10 @@ function AddCard({card}){
                             </FormGroup>
                             <FormGroup>
                                 <Label for="cardNum">Card number</Label>
-                                <Input id="cardNum" minLength="19" maxLength="19" required placeholder='XXXX XXXX XXXX XXXX'/>
+                                <Input id="cardNum" minLength="19" maxLength="19" required placeholder="XXXX XXXX XXXX XXXX"/>
                             </FormGroup>
                             <div className="flex-center width-full">
-                                <Button className='primary-button'>Add card</Button>
+                                <Button className="primary-button">Add card</Button>
                             </div>
                         </Form>
                     </div>

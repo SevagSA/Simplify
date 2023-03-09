@@ -1,5 +1,5 @@
 import "../css/global.css";
-import './TransactionSummary.css';
+import "./TransactionSummary.css";
 import { Component } from "react";
 import { Table } from "reactstrap";
 
@@ -71,13 +71,13 @@ function Transaction(props){
     console.log(props);
     return(
         <tr>
-            <td>{props.value['source']}</td>
-            <td>{props.value['category']}</td>
-            <td>{props.value['date_of_expense']}</td>
-            <td>{props.value['amount']}</td>
+            <td>{props.value["source"]}</td>
+            <td>{props.value["category"]}</td>
+            <td>{props.value["date_of_expense"]}</td>
+            <td>{props.value["amount"]}</td>
             <td>John Doe</td>
             <td>{
-                ['RBC','TD','National Bank','BMO','Scotia'][Math.floor(Math.random() * 5)]
+                ["RBC","TD","National Bank","BMO","Scotia"][Math.floor(Math.random() * 5)]
             }</td>
         </tr>
     )

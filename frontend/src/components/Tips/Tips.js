@@ -1,6 +1,6 @@
 import "../css/global.css";
-import './Tips.css';
-import { Component } from 'react';
+import "./Tips.css";
+import { Component } from "react";
 
 
 class Tips extends Component{
@@ -34,12 +34,12 @@ class Tips extends Component{
 
 function AllTips(props){
     return (
-        <div className='spaced-container tips-container'>
+        <div className="spaced-container tips-container">
             <div>
                 <div className="inline-left">
                     <div className="center-vertical">
                         <p className="no-paddmarg">
-                            <label className='text-black bold-text text-s16'>Stop Coffee</label>
+                            <label className="text-black bold-text text-s16">Stop Coffee</label>
                         </p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ function AllTips(props){
             <div className="inline-left">
                 <div className="center-vertical">
                     <p className="no-paddmarg text-s16">
-                        <label className='pr-05 text-grey'>
+                        <label className="pr-05 text-grey">
                             Save $10.34
                         </label>
                     </p>

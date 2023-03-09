@@ -1,5 +1,5 @@
 function getCards(){
-    return fetch('/transactions/cards/')
+    return fetch("/transactions/cards/")
             .then(response => response.json())
             .then(data => data);
 }

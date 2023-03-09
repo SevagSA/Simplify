@@ -1,5 +1,5 @@
-import '../css/global.css';
-import './PersonalGoal.css';
+import "../css/global.css";
+import "./PersonalGoal.css";
 import { Component } from "react";
 
 

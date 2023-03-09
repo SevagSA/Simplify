@@ -1,5 +1,5 @@
 import "../css/global.css";
-import './ScheduledPayments.css';
+import "./ScheduledPayments.css";
 import { Component } from "react";
 
 
@@ -7,7 +7,7 @@ class ScheduledPayments extends Component{
     constructor(props){
         super(props); 
         this.state = {
-            payments: Array(5).fill('orange'),
+            payments: Array(5).fill("orange"),
         }
     }
 

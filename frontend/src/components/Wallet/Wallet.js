@@ -1,7 +1,7 @@
 import "../css/global.css";
 import "./Wallet.css";
 import DataGraph from "../DataGraph/DataGraph";
-import { LatestSpendings } from '../../components/LatestSpendings/LatestSpendings'
+import { LatestSpendings } from "../../components/LatestSpendings/LatestSpendings"
 
 
 export default function Wallet({card}){
@@ -12,10 +12,10 @@ export default function Wallet({card}){
             </div>
             <div className="mr-8 ml-8">
                 <DataGraph card={card}/>
-                <div style={{height:'2vh'}}></div>
+                <div style={{height:"2vh"}}></div>
                 <p>Note: Not all expenses have alternatives</p>
-                <div style={{height:'2vh'}}></div>
-                <div className='spaced-container'>
+                <div style={{height:"2vh"}}></div>
+                <div className="spaced-container">
                     <LatestSpendings title="Current Expenses"/>
                     <LatestSpendings title="Alternative Suggestions"/>
                     <LatestSpendings title="Potential Savings"/>
