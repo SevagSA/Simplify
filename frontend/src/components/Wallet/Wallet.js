@@ -1,9 +1,8 @@
-// import { Component } from "react";
+import "../css/global.css";
 import "./Wallet.css";
-
-// Child-Components
 import DataGraph from "../DataGraph/DataGraph";
-import {LatestSpendings} from '../../components/LatestSpendings/LatestSpendings'
+import { LatestSpendings } from '../../components/LatestSpendings/LatestSpendings'
+
 
 export default function Wallet({card}){
     return(

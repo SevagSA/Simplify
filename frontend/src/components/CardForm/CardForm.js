@@ -1,3 +1,4 @@
+import "../css/global.css";
 import './CardForm.css'
 import {
     Button,

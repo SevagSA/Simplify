@@ -1,9 +1,8 @@
-// import { Component } from "react";
+import "../css/global.css";
 import "./UserCards.css";
-
-// Child-Components
 import DashboardCard from "../DashboardCard/DashboardCard";
 import CardForm from "../CardForm/CardForm";
+
 
 export default function UserCards({card}){
     return(

@@ -1,3 +1,4 @@
+import "../css/global.css";
 import './TransactionsForm.css'
 import {
     Button,
@@ -5,7 +6,8 @@ import {
     FormGroup,
     Input,
     Label
-  } from 'reactstrap';
+} from 'reactstrap';
+
 
 function CreateTransaction(e){
     e.preventDefault();

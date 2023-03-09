@@ -1,3 +1,5 @@
+import "../css/global.css";
+import './AddCards.css';
 import {
     Button,
     Form,
@@ -5,8 +7,8 @@ import {
     Input,
     Label
   } from 'reactstrap';
-import './AddCards.css';
 
+  
 function CreateCard(e){
     e.preventDefault();
     fetch(`/transactions/cards/`, {
@@ -64,7 +66,6 @@ function AddCard({card}){
                 </div>
             </div>
         </div>
-        
     );
 }
 

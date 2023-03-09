@@ -1,7 +1,8 @@
-import { Component } from "react";
-import './TransactionSummary.css';
 import "../css/global.css";
+import './TransactionSummary.css';
+import { Component } from "react";
 import { Table } from "reactstrap";
+
 
 class TransactionSummary extends Component{
     constructor(props){

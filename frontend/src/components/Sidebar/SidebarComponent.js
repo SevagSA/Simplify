@@ -1,8 +1,9 @@
+import "../css/global.css";
 import "./SidebarComponent.css";
-import '../css/global.css';
 import { Link } from 'react-router-dom';
 import { Component } from "react";
 import userPicture from "../../images/user-picture.jpg";
+
 
 export default class Sidebar extends Component{
   render(){

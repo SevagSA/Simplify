@@ -1,9 +1,9 @@
+import "../css/global.css";
 import "./Transactions.css";
-
-// Child-Components
-import { TransactionSummary } from "../TransactionSummary/TransactionSummary";
 import DashboardCard from "../DashboardCard/DashboardCard";
-import {Tips} from "../Tips/Tips";
+import { TransactionSummary } from "../TransactionSummary/TransactionSummary";
+import { Tips } from "../Tips/Tips";
+
 
 export default function Transactions({card}){
     return(

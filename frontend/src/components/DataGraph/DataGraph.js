@@ -1,8 +1,8 @@
-import { Component } from "react";
+import "../css/global.css";
 import "./DataGraph.css";
-import '../css/global.css';
 import "../../../node_modules/react-vis/dist/style.css";
-import AutoSizer from 'react-virtualized-auto-sizer'
+import AutoSizer from 'react-virtualized-auto-sizer';
+import { Component } from "react";
 import {
   XYPlot,
   XAxis,
@@ -11,6 +11,7 @@ import {
   HorizontalGridLines,
   LineSeries,
 } from "react-vis";
+
 
 export default class DataGraph extends Component {
   constructor(props) {
@@ -30,7 +31,8 @@ export default class DataGraph extends Component {
         this.setState({
           lastMonthSpendings: data,
         });
-      });
+      }
+    );
 
     fetch(`/transactions/cards/${this.props.card.id}/get-all-income/`)
       .then((response) => response.json())
@@ -39,7 +41,8 @@ export default class DataGraph extends Component {
         this.setState({
           lastMonthIncome: data,
         });
-      });
+      }
+    );
   };
 
   render() {
@@ -53,40 +56,40 @@ export default class DataGraph extends Component {
           </label>
         </p>
         <div style={{height:'30vh', width:'100%'}}>
-        <AutoSizer>
-        {({ width, height }) => (
-          <XYPlot width={width} height={height}>
-          <VerticalGridLines />
-          <HorizontalGridLines />
-          <LineSeries
-            data={[
-              { x: 1, y: 300 },
-              { x: 2, y: 590 },
-              { x: 3, y: 200 },
-              { x: 4, y: 300 },
-              { x: 5, y: 700 },
-              { x: 6, y: 500 },
-              { x: 7, y: 600 },
-              { x: 8, y: 700 },
-            ]}
-          />
-          <LineSeries
-            data={[
-              { x: 1, y: 200 },
-              { x: 2, y: 300 },
-              { x: 3, y: 800 },
-              { x: 4, y: 700 },
-              { x: 5, y: 975 },
-              { x: 6, y: 590 },
-              { x: 7, y: 1000 },
-              { x: 8, y: 800 },
-            ]}
-          />
-          <XAxis/>
-          <YAxis/>
-          </XYPlot>
-        )}
-        </AutoSizer>
+          <AutoSizer>
+          {({ width, height }) => (
+            <XYPlot width={width} height={height}>
+            <VerticalGridLines />
+            <HorizontalGridLines />
+            <LineSeries
+              data={[
+                { x: 1, y: 300 },
+                { x: 2, y: 590 },
+                { x: 3, y: 200 },
+                { x: 4, y: 300 },
+                { x: 5, y: 700 },
+                { x: 6, y: 500 },
+                { x: 7, y: 600 },
+                { x: 8, y: 700 },
+              ]}
+            />
+            <LineSeries
+              data={[
+                { x: 1, y: 200 },
+                { x: 2, y: 300 },
+                { x: 3, y: 800 },
+                { x: 4, y: 700 },
+                { x: 5, y: 975 },
+                { x: 6, y: 590 },
+                { x: 7, y: 1000 },
+                { x: 8, y: 800 },
+              ]}
+            />
+            <XAxis/>
+            <YAxis/>
+            </XYPlot>
+          )}
+          </AutoSizer>
         </div>
       </div>
     );

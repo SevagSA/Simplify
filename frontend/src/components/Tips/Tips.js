@@ -1,6 +1,7 @@
-import { Component } from 'react';
+import "../css/global.css";
 import './Tips.css';
-import '../css/global.css';
+import { Component } from 'react';
+
 
 class Tips extends Component{
     constructor(props){
@@ -20,13 +21,13 @@ class Tips extends Component{
 
     render(){
         return (
-        <div>
-            <p className="bold-text text-black spaced-container mb-0">Tips<label className="float-right text-grey unbold-text">View All</label></p>
-            <hr class="solid"></hr>
             <div>
-                {this.renderTips()}
+                <p className="bold-text text-black spaced-container mb-0">Tips<label className="float-right text-grey unbold-text">View All</label></p>
+                <hr class="solid"></hr>
+                <div>
+                    {this.renderTips()}
+                </div>
             </div>
-        </div>
         );
     }
 }

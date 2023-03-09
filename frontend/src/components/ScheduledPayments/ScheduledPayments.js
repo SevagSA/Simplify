@@ -1,5 +1,7 @@
-import { Component } from "react";
+import "../css/global.css";
 import './ScheduledPayments.css';
+import { Component } from "react";
+
 
 class ScheduledPayments extends Component{
     constructor(props){

@@ -1,6 +1,7 @@
-import { Component } from 'react';
+import "../css/global.css";
 import './LatestSpendings.css';
-import '../css/global.css';
+import { Component } from 'react';
+
 
 class LatestSpendings extends Component{
     constructor(props){

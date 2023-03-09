@@ -1,13 +1,12 @@
-import { Component } from "react";
 import '../css/global.css';
 import './PersonalGoal.css';
+import { Component } from "react";
+
 
 export default class PersonalGoal extends Component{
-    // Total of all cards set for personal goal
 
     constructor(props){
         super(props);
-
     }
 
     render(){

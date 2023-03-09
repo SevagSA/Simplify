@@ -1,6 +1,7 @@
-import { Component } from "react";
+import "../css/global.css";
 import "./ExpensesCard.css";
-import '../css/global.css';
+import { Component } from "react";
+
 
 export default class ExpensesCard extends Component{
     render(){
