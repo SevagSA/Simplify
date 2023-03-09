@@ -1,0 +1,8 @@
+.summary-table {
+    height: 40vh !important;
+}
+
+.inner-table {
+    max-height: 100%;
+    overflow: auto;
+}

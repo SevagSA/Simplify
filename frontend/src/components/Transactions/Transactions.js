@@ -11,9 +11,9 @@ export default function Transactions({card}){
     return(
         <div>
             <div className="page-title-container">
-                <h1 className="page-title text-black">Wallet</h1>
+                <h1 className="page-title text-black">Transactions</h1>
             </div>
-            <div>
+            <div className="height-20">
                 <div className='inline-left width-half'>
                     <div className="column-container">
                         <DashboardCard />
@@ -25,8 +25,9 @@ export default function Transactions({card}){
                     </div>
                 </div>
             </div>
-            <div style={{height:'6vh'}}></div>
-            <TransactionSummary />
+            <div className="mr-8 ml-8 mt-10 mb-3">
+                <TransactionSummary card={card}/>
+            </div>
         </div>
     );
 }

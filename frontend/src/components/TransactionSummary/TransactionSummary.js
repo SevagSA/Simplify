@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './TransactionSummary.css';
+import "../css/global.css";
 import { Table, Button } from "reactstrap";
 import {Link} from 'react-router-dom';
 
@@ -35,23 +36,33 @@ class TransactionSummary extends Component{
 
     render(){
         return(
-            <div className="scrollabletable special-table">
-                <Table striped bordered hover special-table>
-                    <thead>
-                        <tr>
-                            <th>Source</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Account</th>
-                            <th>Bank</th>
-                            {/* <th>Operations</th> */}
-                        </tr>      
-                    </thead>
-                    <tbody>
-                        {this.renderTransactions()}
-                    </tbody>
-                </Table>
+            <div>
+                <p className="bold-text text-black spaced-container mb-0">
+                    Transactions Summary
+                    <a className="float-right a-button">Add Transactions</a>
+                </p>
+                <hr class="solid"></hr>
+            
+                <div className="summary-table">
+                    <div className="inner-table">
+                        <Table hover>
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Account</th>
+                                    <th>Bank</th>
+                                    {/* <th>Operations</th> */}
+                                </tr>      
+                            </thead>
+                            <tbody>
+                                {this.renderTransactions()}
+                            </tbody>
+                        </Table>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -60,9 +71,17 @@ class TransactionSummary extends Component{
 function Transaction(props){
     console.log(props);
     return(
-        <div>
-            
-        </div>
+        <tr>
+            <td>{props.value['source']}</td>
+            <td>{props.value['category']}</td>
+            <td>{props.value['date_of_expense']}</td>
+            <td>{props.value['amount']}</td>
+            <td>John Doe</td>
+            <td>{
+                ['RBC','TD','National Bank','BMO','Scotia'][Math.floor(Math.random() * 5)]
+            }</td>
+            {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
+        </tr>
     )
 }
 

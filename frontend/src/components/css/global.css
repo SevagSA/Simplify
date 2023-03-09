@@ -4,6 +4,7 @@
     --custom-light-white: #FAFAFA;
     --custom-white: white;
     --custom-black: black;
+    --custom-light-blue: #0087B8;
     --custom-blue: #003E54;
     --custom-red: #F14747;
     --custom-light-grey: #D9D9D9;
@@ -144,10 +145,34 @@ hr.solid {
     font-weight: normal !important;
 }
 
+.column-container {
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+
+.a-button {
+    color: var(--custom-white);
+    background-color: var(--custom-blue);
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.a-button:hover {
+    color: var(--custom-white);
+    background-color: var(--custom-light-blue);
+    cursor: pointer;
+}
+
 
 
 /* ------------------------------- */
 /* Height Classes */
+.height-20 {
+    height: 20vh;
+}
+
 .height-10 {
     height: 10vh;
 }
@@ -308,6 +333,14 @@ h6{
 p {
     color: var(--custom-dark-grey) !important;
     font-size: 0.75vw !important;
+}
+
+th {
+    text-align: center !important;
+}
+
+tr {
+    text-align: center !important;
 }
 
 
