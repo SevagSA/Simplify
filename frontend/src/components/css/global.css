@@ -47,9 +47,13 @@
 
 
 /* ------------------------------- */
-/* Boilerplate Classes */
+/* Box and Border Classes */
 .box-shadow {
     box-shadow: 0px 2px 10px 2px rgba(0,0,0,.25) !important;
+}
+
+.round-radius {
+    border-radius: 50%;
 }
 
 .border-radius {
@@ -60,6 +64,10 @@
     border: 0.5px solid var(--custom-light-grey);
 }
 
+
+
+/* ------------------------------- */
+/* Alignement Classes */
 .centered-container {
     position: relative;
     text-align: center;
@@ -84,10 +92,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-}
-
-.round-radius {
-    border-radius: 50%;
 }
 
 .inline-left {
@@ -119,6 +123,10 @@
     text-align: center;
 }
 
+
+
+/* ------------------------------- */
+/* Misc. Classes */
 .no-paddmarg {
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -132,11 +140,6 @@
 .spaced-container {
     display: flex;
     justify-content: space-between;
-}
-
-hr.solid {
-    border-top: 3px solid var(--custom-black);
-    margin-bottom: 2vh;
 }
 
 .page-title-container {
@@ -346,6 +349,11 @@ p {
 
 th {
     text-align: center !important;
+}
+
+hr.solid {
+    border-top: 3px solid var(--custom-black);
+    margin-bottom: 2vh;
 }
 
 tr {
