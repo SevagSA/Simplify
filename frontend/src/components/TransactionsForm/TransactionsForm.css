@@ -1,0 +1,13 @@
+#add-transaction-form {
+    width: 25vw;
+}
+
+@media screen and (max-width: 900px) {
+    #add-transaction-container {
+        margin-top: 0 !important;
+    }
+
+    #add-transaction-form {
+        width: 75vw;
+    }
+}
