@@ -23,7 +23,7 @@ export default function Transactions({card}){
                     </div>
                 </div>
             </div>
-            <div className="mr-8 ml-8 mt-10 mb-3">
+            <div className="mr-8 ml-8 mt-15">
                 <TransactionSummary card={card}/>
             </div>
         </div>

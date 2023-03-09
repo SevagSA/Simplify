@@ -349,6 +349,7 @@ p {
 
 th {
     text-align: center !important;
+    font-size: 0.75vw !important;
 }
 
 hr.solid {
@@ -358,6 +359,11 @@ hr.solid {
 
 tr {
     text-align: center !important;
+    font-size: 0.75vw !important;
+}
+
+label, input, select, option, button {
+    font-size: 0.75vw !important;
 }
 
 
