@@ -8,7 +8,7 @@ import {
   } from 'reactstrap';
 
 
-  function editCard(e){
+function editCard(e){
     e.preventDefault();
     fetch(`/transactions/cards/${e.target.cardId.value}/`, {
             method: 'PATCH',

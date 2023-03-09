@@ -23,7 +23,7 @@ export default function UserCards({card}){
             </div>
             <div className="mr-8 ml-8 mb-3">
                 <div className="width-full">
-                    <a className="float-right a-button">Add Card</a>
+                    <a className="float-right a-button" href="/addcard">Add Card</a>
                 </div>
                 <div className="flex-center width-full">
                     <div className="height-20" style={{width:'25vw'}}>

@@ -39,7 +39,7 @@ class TransactionSummary extends Component{
             <div>
                 <p className="bold-text text-black spaced-container mb-0">
                     Transactions Summary
-                    <a className="float-right a-button">Add Transactions</a>
+                    <a className="float-right a-button" href="/addtransaction">Add Transactions</a>
                 </p>
                 <hr class="solid"></hr>
             
@@ -54,7 +54,6 @@ class TransactionSummary extends Component{
                                     <th>Amount</th>
                                     <th>Account</th>
                                     <th>Bank</th>
-                                    {/* <th>Operations</th> */}
                                 </tr>      
                             </thead>
                             <tbody>
