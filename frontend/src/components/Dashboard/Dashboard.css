@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+    #dashboard-column-left {
+        all: unset;
+    }
+
+    #dashboard-column-right {
+        all: unset;
+    }
+
+    #dashboard-small-divider {
+        display: block !important;
+    }
+}

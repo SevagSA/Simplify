@@ -162,6 +162,7 @@
 .a-button, .primary-button {
     color: var(--custom-white) !important;
     background-color: var(--custom-blue) !important;
+    font-size: 0.75vw !important;
     padding: 4px 10px 4px 10px !important;
     text-decoration: none !important;
     border-radius: 5px !important;
@@ -390,4 +391,66 @@ label, input, select, option, button {
 
 .rotate-90 {
     transform: rotate(90deg);
+}
+
+
+
+/* ------------------------------- */
+/* Screen Size */
+@media screen and (max-width: 900px) {
+    .page-title-container {
+        width: 100vw;
+        margin-left: 0;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+
+    /* Readjust text sizing */
+    .a-button, .primary-button {
+        font-size: 0.75rem !important;
+    }
+    
+    p {
+        font-size: 0.75rem !important;
+    }
+    
+    th {
+        font-size: 0.75rem !important;
+    }
+    
+    tr {
+        font-size: 0.75rem !important;
+    }
+    
+    label, input, select, option, button {
+        font-size: 0.75rem !important;
+    }
+    
+    h3{
+        font-size: 0.95rem !important;
+    }
+    
+    h6{
+        font-size: 0.95rem !important;
+    }
+
+    .text-s16 {
+        font-size: 1rem !important;
+    }
+    
+    h2{
+        font-size: 1.5rem !important;
+    }
+    
+    .subtitle-text {
+        font-size: 1.5rem;
+    }
+    
+    .text-s32 {
+        font-size: 2rem !important;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
 }

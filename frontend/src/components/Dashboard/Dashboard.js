@@ -15,7 +15,7 @@ export default function Dashboard({card}){
                 <h1 className="page-title text-black">Dashboard</h1>
             </div>
             <div>
-                <div className="inline-left width-half">
+                <div id="dashboard-column-left" className="inline-left width-half">
                     <div className="column-container">
                         <DashboardCard />
                         <div style={{height:"6vh"}}></div>
@@ -24,7 +24,8 @@ export default function Dashboard({card}){
                         <LatestSpendings title="Latest Expenses"/>
                     </div>
                 </div>
-                <div className="inline-left width-half">
+                <div id="dashboard-small-divider" style={{height:"6vh", display:"none"}}></div>
+                <div id="dashboard-column-right" className="inline-left width-half">
                     <div className="column-container">
                         <DataGraph card={card}/>
                         <div style={{height:"6vh"}}></div>
@@ -33,6 +34,7 @@ export default function Dashboard({card}){
                         <ScheduledPayments />
                     </div>
                 </div>
+                <div id="dashboard-small-divider" style={{height:"6vh", display:"none"}}></div>
             </div>
         </div>
     );
