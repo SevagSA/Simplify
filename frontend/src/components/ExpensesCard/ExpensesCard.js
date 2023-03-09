@@ -1,10 +1,6 @@
 import { Component } from "react";
 import "./ExpensesCard.css";
 import '../css/global.css';
-import {
-    Card, CardBody,
-    CardTitle, CardText, Button
-} from "reactstrap"
 
 export default class ExpensesCard extends Component{
     render(){
@@ -35,7 +31,6 @@ export default class ExpensesCard extends Component{
                     <div className="inline-left width-half">
                         <div className="center-vertical height-8">
                             <p className="no-paddmarg">Spendings <br/><label className="text-black bold-text text-s16">$ 1,500</label></p>
-                            
                         </div>
                     </div>
                 </div>

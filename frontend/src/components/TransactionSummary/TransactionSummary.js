@@ -1,8 +1,7 @@
 import { Component } from "react";
 import './TransactionSummary.css';
 import "../css/global.css";
-import { Table, Button } from "reactstrap";
-import {Link} from 'react-router-dom';
+import { Table } from "reactstrap";
 
 class TransactionSummary extends Component{
     constructor(props){
@@ -79,7 +78,6 @@ function Transaction(props){
             <td>{
                 ['RBC','TD','National Bank','BMO','Scotia'][Math.floor(Math.random() * 5)]
             }</td>
-            {/* <td><Button className='somethingcooler7' variant="dark">Delete</Button></td> */}
         </tr>
     )
 }

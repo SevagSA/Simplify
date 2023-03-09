@@ -4,7 +4,6 @@ import "./Transactions.css";
 import { TransactionSummary } from "../TransactionSummary/TransactionSummary";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import {Tips} from "../Tips/Tips";
-import {Link} from 'react-router-dom';
 
 export default function Transactions({card}){
     return(
