@@ -1,46 +1,80 @@
-.topnav {
-    overflow: hidden;
-    position: relative;
-    margin: 10px 10px 0px 10px;
-}
-
-.topnav #myLinks {
-    display: none;
-    color: black !important;
-}
-
-.topnav a {
-    color: black !important;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-
-.topnav a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.topnav a:hover {
-    color: black;
-}
-
-.active {
-    color: black;
-} 
-
-.sticky {
+.bm-burger-button {
     position: fixed;
-    top: 0;
-    z-index: 1030;
-    width: 98vw;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+}
+
+.bm-burger-bars {
+    background: var(--custom-blue);
+}
+
+.bm-burger-bars-hover {
+    background: var(--custom-light-blue);
+}
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+.bm-item {
+    display: inline-block;
+    color: var(--custom-gray);
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+  
+.bm-item:hover {
+    color: var(--custom-light-blue);
+}
+
+.bm-cross {
+    background: var(--custom-light-white);
+}
+
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
+
+.bm-menu {
+    background: var(--custom-blue);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+.bm-morph-shape {
+    fill: var(--custom-blue);
+}
+
+.bm-item-list {
+    color: var(--custom-light-white);
+    padding: 0.8em;
+}
+
+.bm-item {
+    display: inline-block;
+}
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.bm-burger-button > button {
+    color: transparent;
+}
+
+.bm-cross-button > button {
+    color: transparent;
 }
 
 @media screen and (min-width: 900px) {
-    .topnav, .sticky {
+    #hamburger-menu {
         display: none;
     }
 }
+

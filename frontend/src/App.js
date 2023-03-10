@@ -31,7 +31,7 @@ function App(){
     <BrowserRouter>
       <div>
         <img className="box-shadow top-banner" src={bannerPicture}/>
-        <HamburgerMenu />
+        <HamburgerMenu pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
         <div className="flex-container">
           <div className="inline-left sidebar-container">
             <Sidebar />
