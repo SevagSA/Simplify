@@ -15,6 +15,7 @@ import Transactions from "./components/Transactions/Transactions";
 import UserCards from "./components/UserCards/UserCards";
 import AddCard from "./components/AddCards/AddCards";
 import Wallet from "./components/Wallet/Wallet";
+import HamburgerMenu from "./components/HamburgerMenu/HamburgerMenu";
 import TransactionsForm from "./components/TransactionsForm/TransactionsForm";
 
 function App(){
@@ -30,6 +31,7 @@ function App(){
     <BrowserRouter>
       <div>
         <img className="box-shadow top-banner" src={bannerPicture}/>
+        <HamburgerMenu />
         <div className="flex-container">
           <div className="inline-left sidebar-container">
             <Sidebar />

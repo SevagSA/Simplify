@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    .sidebar-container {
+    .sidebar-container, .top-banner {
         display: none;
     }
 
